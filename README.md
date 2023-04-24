@@ -1,2 +1,1 @@
-# QGT
 Quilmes Gestion Transparente
