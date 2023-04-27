@@ -1,0 +1,76 @@
+.Hero {
+    width: 100%;
+    height: auto;
+}
+
+.Box-hero {
+    padding-top: 100px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+    color: white;
+    padding-bottom: 100px;
+
+}
+
+.Box-hero-elements {
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 80%;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero-title { 
+    text-transform: capitalize; 
+    font-size: 50px; 
+    line-height: 1.375; 
+}
+
+.hero-title, .hero-description { 
+    text-align: center; 
+    font-weight: 600;
+}
+
+.hero-description {
+    width: 80%;
+    font-size: 20px; 
+}
+
+.hero-buttons{
+    width: 100%;
+    justify-content: center;
+    height: auto;
+}
+
+.hero-buttons-box{
+    width: 50%;
+    align-items: center;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.hero-button1, .hero-button2{
+    color: inherit;
+    text-decoration: inherit;
+    border: rgba(255, 255, 255, 0.363) 1px solid;
+    border-radius: 100px;
+    padding: 0.75rem 2.5rem;
+    font-weight: 600;
+    size: 25px;
+}
+
+.hero-button1 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(8 126 164/var(--tw-bg-opacity));
+    }
+
+.hero-button1:hover, .hero-button2:hover {
+    background-color: white;
+    color: #282c34;
+}
