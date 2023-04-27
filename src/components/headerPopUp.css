@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.PopUp-container {
+    position: absolute;
+    background-color: #1f1f1f;
+    transform: translateX(-330px);
+    top: 5rem;
+    width: 786px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.7);
+    font-family: 'Segoe UI';
+    font-weight: 500;
+}
+
+.PopUp-list {
+    display: flex;
+    color: white;
+    flex-wrap: wrap;
+    height: 100%;
+    list-style: none;
+}
+
+.PopUp-list > li {
+    width: 243px;
+    height: 160px;
+    margin: 7px;
+    background-color: #2f2f2f;
+    border-radius: 3px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.PopUp-list > li > h5 {
+    letter-spacing: 1px;
+}
+
+.PopUp-list > li > h5 {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.PopUp-list > li > p {
+    margin-top: 5px;
+    padding: 0 5px;
+}
+
+.PopUp-list > li:hover {
+    background-color: rgba(48, 114, 207, 0.8)
+}
