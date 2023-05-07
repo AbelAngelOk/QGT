@@ -1,0 +1,74 @@
+@import './styles.css';
+
+.Team2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+    background-color: var(--background04);
+    border-top: 1px solid var(--border01);
+    border-bottom: 1px solid var(--border01);
+}
+
+.Team2--Title, .Team2--Blocks {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.Team2--Title {
+    justify-content: center;
+}
+
+.Team2--Blocks {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 25px;
+}
+
+.Team2--Block {
+    width: 18vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: var(--background03);
+    padding: 0 10px;
+    box-shadow: 5px 5px 12px 0px rgba(255, 255, 255, 0.01);
+}
+
+
+.Team2--Block ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+    margin-top: 10px;
+}
+
+.Block--Text {
+    width: 80%;
+}
+
+.Block--Text ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.Block--Logo {
+    width: 20%;
+}
+
+.Team2--sub {
+    text-transform: capitalize;
+    font-size: 20px; 
+    font-weight: 600;
+    color: var(--text01);
+}
+
+.Team2--description {
+    font-size: 17px; 
+    font-weight: 400;
+    color: var(--text01);
+}

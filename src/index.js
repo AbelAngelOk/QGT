@@ -2,15 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Header from './components/Header';
-import Hero from "./components/Hero"
+import Hero from "./components/Hero";
+import Team2 from "./components/Team2";
+
 //import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import Proyectos from './components/Proyectos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
     <Hero />
+    <Team2 />
+    <Proyectos />
   </React.StrictMode>
 );
 

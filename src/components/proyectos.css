@@ -1,0 +1,70 @@
+@import './styles.css';
+
+.proyectos {
+    padding: 0px 5%;
+    background-color: var(--background03);
+}
+
+.proyectos--inner {
+    flex-direction: column;
+    gap: 10vh;
+}
+
+.proyectos,
+.proyectos--inner,
+.proyectos--title,
+.proyectos--description,
+/* .proyectos--tab, */
+.proyectos--containerBox,
+.proyectos--detalle {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyectos--tab {
+    width: 50px;
+}
+
+.proyectos--containerBox__ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.proyectos--box {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 5px;
+    box-shadow: 5px 5px 12px 0px rgba(255, 255, 255, 0.01);
+    background: var(--background04);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.proyectos--box:hover, .proyectos--box:active, .proyectos--box::after {
+    box-shadow: 5px 5px 12px 0px rgba(255, 255, 255, 1);
+}
+
+.proyectos--boxImg {
+    width: 50%;
+    height: 50%;
+}
+.proyectos--TablaDetalle {
+    width: 90%;
+    height: 50vh;
+    border-radius: 5px;
+    box-shadow: 5px 5px 12px 0px rgba(255, 255, 255, 0.1);
+    background: var(--background04);
+    margin: 10vh 0px;
+}
+
+img {
+    border-radius: 50%;
+}

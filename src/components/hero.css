@@ -33,7 +33,7 @@
 .hero-title { 
     text-transform: capitalize; 
     font-size: 50px; 
-    line-height: 1.375; 
+    line-height: 1.375;  
     display: flex;
     flex-wrap: wrap;
 }
