@@ -35,7 +35,7 @@ export function Header() {
         <header>
             <div className="header__logo-container">
                 <Link to="/" className="logo__link">
-                    <h1 class="logo__text">
+                    <h1 className="logo__text">
                     Quilmes
                     </h1>
                 </Link>  

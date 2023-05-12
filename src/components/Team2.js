@@ -5,7 +5,7 @@ import linkedin from './assets/img/linkedin.svg';
 export function Team2 () {
     return (
         <section className="Team2">
-            <script src="https://kit.fontawesome.com/811ec135b9.js" crossorigin="anonymous"></script>
+            <script src="https://kit.fontawesome.com/811ec135b9.js" crossOrigin="anonymous"></script>
 
             <div className='Team2--Title'>
                 <h1>Equipo Electoral</h1>
