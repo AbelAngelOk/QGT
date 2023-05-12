@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.PopUp-container {
+.popUp-container {
     position: absolute;
     background-color: #1f1f1f;
     transform: translateX(-330px);
@@ -17,7 +17,7 @@
     font-weight: 500;
 }
 
-.PopUp-list {
+.popUp-list {
     display: flex;
     color: white;
     flex-wrap: wrap;
@@ -25,7 +25,7 @@
     list-style: none;
 }
 
-.PopUp-list > li {
+.popUp-list > li {
     width: 243px;
     height: 160px;
     margin: 7px;
@@ -33,23 +33,39 @@
     border-radius: 3px;
     transition: 0.5s;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
 }
 
-.PopUp-list > li > h5 {
-    letter-spacing: 1px;
+.popUp-link {
+    width: 243px;
+    height: 160px;
+    margin: 7px;
+    background-color: #2f2f2f;
+    border-radius: 3px;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI';
 }
 
-.PopUp-list > li > h5 {
+.popUp-link:hover {
+    background-color: rgba(48, 114, 207, 0.8)
+}
+
+.popUp-list__box-title {
     font-size: 15px;
     margin-top: 15px;
     margin-left: 5px;
+    letter-spacing: 1px;
 }
 
-.PopUp-list > li > p {
+.popUp-list__box-text {
     margin-top: 5px;
     padding: 0 5px;
 }
 
-.PopUp-list > li:hover {
+.popUp-list > li:hover {
     background-color: rgba(48, 114, 207, 0.8)
 }

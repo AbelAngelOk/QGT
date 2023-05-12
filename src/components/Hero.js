@@ -1,6 +1,6 @@
 import './hero.css';
 
-function Hero() {
+export function Hero() {
   return (
     <div className="Hero">
       <div className="Box-hero">
@@ -18,5 +18,3 @@ function Hero() {
     </div>
   );
 }
-
-export default Hero;

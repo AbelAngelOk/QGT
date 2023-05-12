@@ -2,7 +2,7 @@ import './team2.css';
 import './styles.css';
 import linkedin from './assets/img/linkedin.svg';
 
-function Team2 () {
+export function Team2 () {
     return (
         <section className="Team2">
             <script src="https://kit.fontawesome.com/811ec135b9.js" crossorigin="anonymous"></script>
@@ -14,7 +14,7 @@ function Team2 () {
             <div className='Team2--Blocks'>
                 
                 <ul className='Team2--Block'>
-                   <img src='https://arbusta.net/wp-content/uploads/2023/01/Emiliano-Fazio-300x300.png' />
+                   <img src='https://arbusta.net/wp-content/uploads/2023/01/Emiliano-Fazio-300x300.png' alt='Emiliano Fazio'/>
                    <ul>
                         <li className='Block--Text'>
                             <ul >
@@ -23,12 +23,12 @@ function Team2 () {
                             </ul>
                         </li>
                         <li className='Block--Logo'>
-                            <img src={linkedin}/>
+                            <img src={linkedin} alt='linkedin-logo'/>
                         </li>
                     </ul>
                 </ul>
                 <div className='Team2--Block'>
-                   <img src='https://arbusta.net/wp-content/uploads/2023/01/Paula-Cardenau-300x300.png' />
+                   <img src='https://arbusta.net/wp-content/uploads/2023/01/Paula-Cardenau-300x300.png' alt='Emiliano Fazio'/>
                     <ul>
                         <li className='Block--Text'>
                             <ul >
@@ -38,12 +38,12 @@ function Team2 () {
                             </ul>
                         </li>
                         <li className='Block--Logo'>
-                            <img src={linkedin}/>
+                            <img src={linkedin} alt='linkedin-logo'/>
                         </li>
                     </ul>
                 </div>                
                 <ul className='Team2--Block'>
-                   <img src='https://arbusta.net/wp-content/uploads/2023/02/Juan-Umaran-300x300.png' />
+                   <img src='https://arbusta.net/wp-content/uploads/2023/02/Juan-Umaran-300x300.png' alt='Emiliano Fazio'/>
                    <ul>
                         <li className='Block--Text'>
                             <ul >
@@ -53,12 +53,12 @@ function Team2 () {
                             </ul>
                         </li>
                         <li className='Block--Logo'>
-                            <img src={linkedin}/>
+                            <img src={linkedin} alt='linkedin-logo'/>
                         </li>
                     </ul>
                 </ul>                
                 <ul className='Team2--Block'>
-                   <img src='https://arbusta.net/wp-content/uploads/2023/02/Beatriz-Ponce-de-Leon-300x300.png' />
+                   <img src='https://arbusta.net/wp-content/uploads/2023/02/Beatriz-Ponce-de-Leon-300x300.png' alt='Emiliano Fazio'/>
                    <ul>
                         <li className='Block--Text'>
                             <ul >
@@ -68,12 +68,12 @@ function Team2 () {
                             </ul>
                         </li>
                         <li className='Block--Logo'>
-                            <img src={linkedin}/>
+                            <img src={linkedin} alt='linkedin-logo'/>
                         </li>
                     </ul>
                 </ul>                
                 <ul className='Team2--Block'>
-                   <img src='https://arbusta.net/wp-content/uploads/2023/02/Karen-Reales-300x300.png' />
+                   <img src='https://arbusta.net/wp-content/uploads/2023/02/Karen-Reales-300x300.png' alt='Emiliano Fazio'/>
                    <ul>
                         <li className='Block--Text'>
                             <ul >
@@ -83,15 +83,13 @@ function Team2 () {
                             </ul>
                         </li>
                         <li className='Block--Logo'>
-                            <img src={linkedin}/>
+                            <img src={linkedin} alt='linkedin-logo'/>
                         </li>
                     </ul>
                 </ul>            
-                </div>
+            </div>
         </section>
 
         
     );
 }
-
-export default Team2;

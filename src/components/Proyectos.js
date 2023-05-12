@@ -3,7 +3,7 @@ import './styles.css';
 import br from './assets/img/br.png';
 import patrulla from './assets/img/Patrull.webp';
 
-function Proyectos () {
+export function Proyectos () {
     return (
         <section className='proyectos'>
             <ul className='proyectos--inner'>
@@ -14,12 +14,12 @@ function Proyectos () {
                     <p>Nuestro compromiso es mejorar la calidad de vida de cada ciudadano de Quilmes. Nuestra misión consiste en impulsar los aspectos fundamentales, como la seguridad, la educación, el fomento de la industria y el enriquecimiento de Quilmes. Para lograrlo, hemos planificado múltiples proyectos que, individualmente, contribuyen significativamente a la calidad de vida y, en conjunto, se refuerzan mutuamente para mejorar todos los aspectos. </p>
                 </li>
                 <li className='proyectos--tab'>
-                    <img src={br}/>
+                    <img src={br} alt='proyectos'/>
                 </li>
                 <li className='proyectos--containerBox'>
                     <ul className='proyectos--containerBox__ul'>
                         <li className='proyectos--box'>
-                            <div className='proyectos--boxImg'><img src={patrulla}/></div>
+                            <div className='proyectos--boxImg'><img src={patrulla} alt='patrulla'/></div>
                             <h4>Garantizar seguridad</h4>
                         </li>
                         <li className='proyectos--box'></li>
@@ -37,5 +37,3 @@ function Proyectos () {
         </section>
     );
 };
-
-export default Proyectos;
