@@ -8,9 +8,6 @@
     --background06: #149eca;
     --border01: #e5e7ea26;
     --text01: rgb(246 247 249);
-
-    --img01: "https://arbusta.net/wp-content/uploads/2023/01/Emiliano-Fazio-300x300.png";
-
 }
 
 p, h6 {
@@ -51,7 +48,7 @@ h1, h2, h3 {
         Noto Color Emoji;
 }
 
-h1, h2, h3, h4, p { color: var(--text01); }
+h1, h2, h3, h4, h6, p { color: var(--text01); }
 
 h1 {
     font-size: 52px;

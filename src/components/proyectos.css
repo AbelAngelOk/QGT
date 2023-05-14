@@ -48,7 +48,7 @@
     display: flex;
 }
 
-.proyectos--box:hover, .proyectos--box:active, .proyectos--box::after {
+.sombreado {
     box-shadow: 5px 5px 12px 0px rgba(255, 255, 255, 1);
 }
 
@@ -65,6 +65,63 @@
     margin: 10vh 0px;
 }
 
-img {
-    border-radius: 50%;
+/******************************************/
+/***** para funcion contenido detalle *****/
+
+.DetalleProyecto {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.DetalleProyecto--derecha {
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+.DetalleProyecto--derecha--contenedorDeImagen {
+    width: auto;
+    height: 30%;
+}
+
+.DetalleProyecto--izquierda {
+    height: 100%;
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 2vh;
+}
+
+.DetalleProyecto--up {
+    width: 100%;
+    height: auto;
+}
+
+.DetalleProyecto--down {
+    width: 100%;
+    height: auto;
+}
+
+/******************************************/
+/****** Funcion para cada caja de seccion proyectos ************************************/
+
+.proyectos--box--contenedorDeImagen {
+    width: 25%;
+    height: 25%;
+}
+
+.proyectos--box--titulo {
+    width: auto;
+    height: auto;
+}
+
+.proyectos--box--icon, .proyectos--tab--icon, .DetalleProyecto--Icon {
+    filter: invert(95%) sepia(42%) saturate(5365%) hue-rotate(16deg) brightness(106%) contrast(107%);
 }

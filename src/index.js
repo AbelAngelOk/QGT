@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import Header from './components/Header';
 import Hero from "./components/Hero";
 import Team2 from "./components/Team2";
+import Banner from "./components/Banner";
 
 //import App from './components/App';
 import reportWebVitals from './reportWebVitals';
@@ -13,6 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
+    <Banner/>
     <Hero />
     <Team2 />
     <Proyectos />
