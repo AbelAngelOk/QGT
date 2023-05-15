@@ -12,7 +12,7 @@ const exampleImg05 = "https://arbusta.net/wp-content/uploads/2023/02/Karen-Reale
 
 const titulo_seccion_equipo = "Equipo Electoral";
 
-export function Team2 () {
+export function Team () {
 
     return (
         <section className="Team2">
