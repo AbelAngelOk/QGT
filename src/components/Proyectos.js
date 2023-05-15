@@ -1,8 +1,8 @@
 import './proyectos.css';
 import './styles.css';
 import bars from './assets/img/bars.svg';
-import patrulla from './assets/img/Patrull.webp';
-import React,{useState} from 'react';
+//import patrulla from './assets/img/Patrull.webp';
+import { useState } from 'react';
 
 import logoSeguridad from './assets/img/seguridad.svg';
 import logoEducation from './assets/img/educacion.svg';
@@ -32,68 +32,71 @@ const descripccion_de_proyecto_educacion = "Nos comprometemos a proporcionar aul
 
 export function Proyectos () {
 
-    // Proposito: dado el evento click en una caja de proyectos ilumina la caja y escribe en Tabla con detalles.
-    const cuandoRecibeClick = (element) => {       
-        quitarSombreadoEnCadaCaja();
-        agregarSobreadoACaja(element);
-    }
-    
-    //Proposito: remueve el sombreado de todas las cajas de proyectos.
-    const quitarSombreadoEnCadaCaja = () => {
-        cajas.forEach(element => {
-            element.classList.remove("sombreado");
-        });
-    }
-    
-    //proposito: ilumina la caja de proyecto "element".
-    const agregarSobreadoACaja = (element) => {
-        element.classList.add("sombreado");
-    }
-    
-return (
-        <section className='proyectos'>
-            <ul className='proyectos--inner'>
-                <li className='proyectos--title'>
-                    <h1> { titulo_de_seccion_proyectos }</h1>
-                </li>
-                <li className='proyectos--description'>
-                    <p> { descripcion_de_proyectos } </p>
-                </li>
-                <li className='proyectos--tab'>
-                    <img src={bars} className='proyectos--tab--icon'/>
-                </li>
-                <li className='proyectos--containerBox'>
-                    <ul className='proyectos--containerBox__ul'>
-                        <li id='box01' className='proyectos--box' onClick={() => cuandoRecibeClick(box01)}> { contenido_caja_de_seccion_proyectos(logoSeguridad, titulo_de_proyecto_seguridad) } </li>
-                        <li id='box02' className='proyectos--box' onClick={() => cuandoRecibeClick(box02)}> { contenido_caja_de_seccion_proyectos(logoImpositivo, titulo_de_proyecto_impositivo) } </li>
-                        <li id='box03' className='proyectos--box' onClick={() => cuandoRecibeClick(box03)}> { contenido_caja_de_seccion_proyectos(logoSalud, titulo_de_proyecto_salud) } </li>
-                        <li id='box04' className='proyectos--box' onClick={() => cuandoRecibeClick(box04)}> { contenido_caja_de_seccion_proyectos(logoEducation, titulo_de_proyecto_educacion) } </li>
-                        <li id='box05' className='proyectos--box' onClick={() => cuandoRecibeClick(box05)}> { contenido_caja_de_seccion_proyectos(logoNull, "proximamente...") } </li>
-                    </ul>
-                </li>
-                <li className='proyectos--detalle'>
-                    <div className='proyectos--TablaDetalle'>
-                        { contenido_detalle_Proyecto(logoSeguridad, titulo_de_proyecto_seguridad, descripccion_de_proyecto_seguridad) }            
-                    </div>
-                </li>
-            </ul>
-        </section>
+    const [contenidoRecuadro, setContenidoRecuadro] = useState(undefined)
 
-    );
-};
+    // Proposito: Ilumina la caja seleccionada y remueve la iluminación de la caja previamente clickeada.
+    const manejarSombreado = (index) => {
+        cajas.forEach((caja, i) => {
+            if(i === index) {
+                caja.classList.add("sombreado");
+            } else {
+                caja.classList.remove("sombreado");
+            };
+        });
+    };
+
+    //Actualiza el componente en la caja de detalle de la sección proyectos, llama a la función para manejar la iluminación
+
+    const manejarClick = (componente, index) => {
+        setContenidoRecuadro(componente);
+        manejarSombreado(index);
+    };
+    
+    return (
+            <section className='proyectos'>
+                <ul className='proyectos--inner'>
+                    <li className='proyectos--title'>
+                        <h1> { titulo_de_seccion_proyectos }</h1>
+                    </li>
+                    <li className='proyectos--description'>
+                        <p> { descripcion_de_proyectos } </p>
+                    </li>
+                    <li className='proyectos--tab'>
+                        <img src={bars} className='proyectos--tab--icon' alt="barras"/>
+                    </li>
+                    <li className='proyectos--containerBox'>
+                        <ul className='proyectos--containerBox__ul'>
+                            <li id='box01' className='proyectos--box' onClick={() => manejarClick(<ContenidoDetalleProyecto titular= {descripccion_de_proyecto_seguridad} descripccion={descripccion_de_proyecto_seguridad} imagen={logoSeguridad} />, 0)}> { contenido_caja_de_seccion_proyectos(logoSeguridad, titulo_de_proyecto_seguridad) } </li>
+                            <li id='box02' className='proyectos--box' onClick={() => manejarClick(<ContenidoDetalleProyecto titular= {descripccion_de_proyecto_impositivo} descripccion={descripccion_de_proyecto_impositivo} imagen={logoImpositivo} />, 1)}> { contenido_caja_de_seccion_proyectos(logoImpositivo, titulo_de_proyecto_impositivo) } </li>
+                            <li id='box03' className='proyectos--box' onClick={() => manejarClick(<ContenidoDetalleProyecto titular= {descripccion_de_proyecto_salud} descripccion={descripccion_de_proyecto_salud} imagen={logoSalud}/>, 2)}> { contenido_caja_de_seccion_proyectos(logoSalud, titulo_de_proyecto_salud) } </li>
+                            <li id='box04' className='proyectos--box' onClick={() => manejarClick(<ContenidoDetalleProyecto titular= {descripccion_de_proyecto_educacion} descripccion={descripccion_de_proyecto_educacion} imagen={logoEducation} />, 3)}> { contenido_caja_de_seccion_proyectos(logoEducation, titulo_de_proyecto_educacion) } </li>
+                            <li id='box05' className='proyectos--box' onClick={() => manejarClick(null, 4)}> { contenido_caja_de_seccion_proyectos(logoNull, "proximamente...") } </li>
+                        </ul>
+                    </li>
+                    <li className='proyectos--detalle'>
+                        <div className='proyectos--TablaDetalle'>
+                            {contenidoRecuadro}            
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+        );
+    };
 
 //Proposito: dada un imagen, un titulo y una descripcion crea el contenido de la caja de detalle de la seccion proyectos.
-const contenido_detalle_Proyecto = (imagen, titular, descripcion) => {
-    return (
+
+const ContenidoDetalleProyecto = (props) => {
+    return(
         <section className='DetalleProyecto'>
             <div className='DetalleProyecto--derecha'>
                 <div className='DetalleProyecto--derecha--contenedorDeImagen'>
-                    <img src={imagen} className='DetalleProyecto--Icon'/>
+                    <img src={props.imagen} className='DetalleProyecto--Icon' alt="proyecto-icono" />
                 </div>
             </div>
             <div className='DetalleProyecto--izquierda'>
-                <div className='DetalleProyecto--up'> <h6>{titular}</h6> </div>
-                <div className='DetalleProyecto--down'> <p>{descripcion}</p> </div>
+                <div className='DetalleProyecto--up'> <h6>{props.titulo}</h6> </div>
+                <div className='DetalleProyecto--down'> <p>{props.descripccion}</p> </div>
             </div>
         </section>
     )
@@ -103,91 +106,8 @@ const contenido_detalle_Proyecto = (imagen, titular, descripcion) => {
 const contenido_caja_de_seccion_proyectos = (logo, titular) => {
     return (
         <section className='proyectos--box'>
-            <div className='proyectos--box--contenedorDeImagen'><img className='proyectos--box--icon' src={logo}/></div>
+            <div className='proyectos--box--contenedorDeImagen'><img className='proyectos--box--icon' src={logo} alt="proyecto-icono" /></div>
             <div className='proyectos--box--titulo'><p>{titular}</p></div>
         </section>
     )
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function proyecto01 () {
-    return (
-        <div id='proyecto01' className='proyecto01'>
-            <div className='proyectos--boxImg'><img src={patrulla}/></div>
-            <h4>Garantizar seguridad</h4>
-        </div>
-    );
-}
-
-function proyecto02 () {
-    return (
-        <div id='proyecto01' className='proyecto01'>
-            <div className='proyectos--boxImg'><img src={patrulla}/></div>
-            <h4>Garantizar seguridad</h4>
-        </div>
-    );
-}
-
-function proyecto03 () {
-    return (
-        <div id='proyecto01' className='proyecto01'>
-            <div className='proyectos--boxImg'><img src={patrulla}/></div>
-            <h4>Garantizar seguridad</h4>
-        </div>
-    );
-}
-
-function proyecto04 () {
-    return (
-        <div id='proyecto01' className='proyecto01'>
-            <div className='proyectos--boxImg'><img src={patrulla}/></div>
-            <h4>Garantizar seguridad</h4>
-        </div>
-    );
-}
-
-function proyecto05 () {
-    return (
-        <div id='proyecto01' className='proyecto01'>
-            <div className='proyectos--boxImg'><img src={patrulla}/></div>
-            <h4>Garantizar seguridad</h4>
-        </div>
-    );
 }
