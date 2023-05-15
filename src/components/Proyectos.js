@@ -1,8 +1,7 @@
 import './proyectos.css';
 import './styles.css';
 import bars from './assets/img/bars.svg';
-//import patrulla from './assets/img/Patrull.webp';
-import { useState } from 'react';
+import React,{useState} from 'react';
 
 
 import logoSeguridad from './assets/img/seguridad.svg';
