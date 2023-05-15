@@ -30,7 +30,7 @@ const descripccion_de_proyecto_salud = "Llevaremos a cabo una completa renovaci�
 const titulo_de_proyecto_educacion = "Educación de Calidad";
 const descripccion_de_proyecto_educacion = "Nos comprometemos a proporcionar aulas calefaccionadas y completamente equipadas para facilitar un entorno de aprendizaje óptimo y promover el trabajo pedagógico de calidad. Además, nos aseguraremos de que nuestros edificios escolares cumplan con todas las normas de seguridad y estén en condiciones óptimas de salubridad. Nos enfocaremos en realizar las reparaciones necesarias y mantener un entorno escolar seguro y saludable para nuestros estudiantes y personal docente.";
 
-export default function Proyectos () {
+export function Proyectos () {
 
     // Proposito: dado el evento click en una caja de proyectos ilumina la caja y escribe en Tabla con detalles.
     const cuandoRecibeClick = (element) => {       

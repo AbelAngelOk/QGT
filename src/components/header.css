@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo:ital@1&family=Noto+Sans:ital@1&family=Roboto:ital,wght@1,300;1,500&display=swap');
+@import './styles.css';
+
 
 * {
     box-sizing: border-box;
@@ -9,9 +11,11 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 90px;
-    background-color: #eeeeee;
+    background-color: #282c34;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
     font-family: "Roboto", sans-serif;
+    position: fixed;
+    width: 100%;
 }
 
 .header__logo-container {
@@ -20,10 +24,18 @@ header {
     justify-content: center;
 }
 
-.header__logo-container > p {
+.logo__link {
+    text-decoration: none;
+}
+
+.logo__text {
     font-size: 2.5rem;
     margin-right: 90px;
+    margin-bottom: 15px;
     user-select: none;
+    cursor: pointer;
+    color: #f3f3f3;
+    padding: 0;
 }
 
 header > div {
@@ -46,12 +58,12 @@ header > div {
 
 .header__nav-list > li {
     display: flex;
+    height: 80%;
 }
 
 .header__nav-list > li > p {
-    background-color: #eeeeee;
     border: none;
-    color: #2d2d2d;
+    color: #f3f3f3;
     font-size: 1rem;
     letter-spacing: 2px;
     font-family: "Roboto", sans-serif;
@@ -59,31 +71,13 @@ header > div {
     position: relative;
     cursor: pointer;
     user-select: none;
-    top: 2px;
-}
-
-.header__nav-list > li > p:last-child {
-    top: 0;
+    top: 25px;
 }
 
 .header__list-icon {
     position: relative;
     font-size: 18px;
     cursor: pointer;
-    top: 2px;
-}
-
-
-.header__menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.header__menu > div {
-    position: relative;
-    top: 8px;
-    right: 50px;
-    font-size: 48px;
-    cursor: pointer;
+    top: 25px;
+    color: #f3f3f3
 }
