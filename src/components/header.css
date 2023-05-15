@@ -16,6 +16,7 @@ header {
     font-family: "Roboto", sans-serif;
     position: fixed;
     width: 100%;
+    z-index: 50;
 }
 
 .header__logo-container {

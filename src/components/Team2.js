@@ -4,8 +4,8 @@ import linkedin from './assets/img/linkedin.svg';
 import ammaturoImg from './assets/img/ammaturo_v2.png';
 import alfasetti from './assets/img/alfasetti.png';
 
-const exampleImg01 = "https://arbusta.net/wp-content/uploads/2023/01/Emiliano-Fazio-300x300.png"
-const exampleImg02 = "https://arbusta.net/wp-content/uploads/2023/01/Emiliano-Fazio-300x300.png";
+//const exampleImg01 = "https://arbusta.net/wp-content/uploads/2023/01/Emiliano-Fazio-300x300.png"
+//const exampleImg02 = "https://arbusta.net/wp-content/uploads/2023/01/Emiliano-Fazio-300x300.png";
 const exampleImg03 = "https://arbusta.net/wp-content/uploads/2023/01/Paula-Cardenau-300x300.png";
 const exampleImg04 = "https://arbusta.net/wp-content/uploads/2023/02/Beatriz-Ponce-de-Leon-300x300.png";
 const exampleImg05 = "https://arbusta.net/wp-content/uploads/2023/02/Karen-Reales-300x300.png";
@@ -35,7 +35,7 @@ function Member (img, name, rol) {
     return (
         <section className='Team2--Member'>
             <div className='Team2--ImgContainer'>
-                <img src={img} />
+                <img src={img} alt="imagen-miembro" />
             </div>
             <ul className='Team2--BlockTextAndLogo'>
                 <li className='Block--Text'>
@@ -45,7 +45,7 @@ function Member (img, name, rol) {
                     </ul>
                 </li>
                 <li className='Block--Logo oculto'>
-                    <img src={linkedin}/>
+                    <img src={linkedin} alt="linkedin"/>
                 </li>
             </ul>
         </section>
