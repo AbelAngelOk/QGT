@@ -4,12 +4,12 @@ import { Main } from "./Main";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Compromiso } from "./Compromiso";
 
-
 function App() {
+
   return (
     <div className="App">
       <Router>
-        <div className="header__container">
+        <div className="header__container" id="topHeader">
           <Header/>
         </div>
         <Routes>        
@@ -19,6 +19,6 @@ function App() {
       </Router>
     </div>
   );
-}
+};
 
 export default App;

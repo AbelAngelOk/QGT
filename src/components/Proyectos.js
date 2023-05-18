@@ -1,7 +1,7 @@
 import './proyectos.css';
 import './styles.css';
 import bars from './assets/img/bars.svg';
-import React,{useState} from 'react';
+import {useState} from 'react';
 
 
 import logoSeguridad from './assets/img/seguridad.svg';
@@ -48,10 +48,10 @@ export function Proyectos () {
                     </li>
                     <li className='proyectos--containerBox'>
                         <ul className='proyectos--containerBox__ul'>
-                            <li id='box01' className={`proyectos--box ${cajaIluminada === 0 ? "sombreado" : "" }`} onClick={() => manejarClick(<ContenidoDetalleProyecto titular= {descripccion_de_proyecto_seguridad} descripccion={descripccion_de_proyecto_seguridad} imagen={logoSeguridad} />, 0)}> { contenido_caja_de_seccion_proyectos(logoSeguridad, titulo_de_proyecto_seguridad) } </li>
-                            <li id='box02' className={`proyectos--box ${cajaIluminada === 1 ? "sombreado" : "" }`} onClick={() => manejarClick(<ContenidoDetalleProyecto titular= {descripccion_de_proyecto_impositivo} descripccion={descripccion_de_proyecto_impositivo} imagen={logoImpositivo} />, 1)}> { contenido_caja_de_seccion_proyectos(logoImpositivo, titulo_de_proyecto_impositivo) } </li>
-                            <li id='box03' className={`proyectos--box ${cajaIluminada === 2 ? "sombreado" : "" }`} onClick={() => manejarClick(<ContenidoDetalleProyecto titular= {descripccion_de_proyecto_salud} descripccion={descripccion_de_proyecto_salud} imagen={logoSalud}/>, 2)}> { contenido_caja_de_seccion_proyectos(logoSalud, titulo_de_proyecto_salud) } </li>
-                            <li id='box04' className={`proyectos--box ${cajaIluminada === 3 ? "sombreado" : "" }`} onClick={() => manejarClick(<ContenidoDetalleProyecto titular= {descripccion_de_proyecto_educacion} descripccion={descripccion_de_proyecto_educacion} imagen={logoEducation} />, 3)}> { contenido_caja_de_seccion_proyectos(logoEducation, titulo_de_proyecto_educacion) } </li>
+                            <li id='box01' className={`proyectos--box ${cajaIluminada === 0 ? "sombreado" : "" }`} onClick={() => manejarClick(<ContenidoDetalleProyecto titulo= {titulo_de_proyecto_seguridad} descripccion={descripccion_de_proyecto_seguridad} imagen={logoSeguridad} />, 0)}> { contenido_caja_de_seccion_proyectos(logoSeguridad, titulo_de_proyecto_seguridad) } </li>
+                            <li id='box02' className={`proyectos--box ${cajaIluminada === 1 ? "sombreado" : "" }`} onClick={() => manejarClick(<ContenidoDetalleProyecto titulo= {titulo_de_proyecto_impositivo} descripccion={descripccion_de_proyecto_impositivo} imagen={logoImpositivo} />, 1)}> { contenido_caja_de_seccion_proyectos(logoImpositivo, titulo_de_proyecto_impositivo) } </li>
+                            <li id='box03' className={`proyectos--box ${cajaIluminada === 2 ? "sombreado" : "" }`} onClick={() => manejarClick(<ContenidoDetalleProyecto titulo= {titulo_de_proyecto_salud} descripccion={descripccion_de_proyecto_salud} imagen={logoSalud}/>, 2)}> { contenido_caja_de_seccion_proyectos(logoSalud, titulo_de_proyecto_salud) } </li>
+                            <li id='box04' className={`proyectos--box ${cajaIluminada === 3 ? "sombreado" : "" }`} onClick={() => manejarClick(<ContenidoDetalleProyecto titulo= {titulo_de_proyecto_educacion} descripccion={descripccion_de_proyecto_educacion} imagen={logoEducation} />, 3)}> { contenido_caja_de_seccion_proyectos(logoEducation, titulo_de_proyecto_educacion) } </li>
                             <li id='box05' className={`proyectos--box ${cajaIluminada === 4 ? "sombreado" : "" }`} onClick={() => manejarClick(null, 4)}> { contenido_caja_de_seccion_proyectos(logoNull, "proximamente...") } </li>
                         </ul>
                     </li>
@@ -67,6 +67,8 @@ export function Proyectos () {
     };
 
 //Proposito: dada un imagen, un titulo y una descripcion crea el contenido de la caja de detalle de la seccion proyectos.
+
+
 
 const ContenidoDetalleProyecto = (props) => {
     return(

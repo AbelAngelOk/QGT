@@ -59,7 +59,8 @@ header > div {
 
 .header__nav-list > li {
     display: flex;
-    height: 80%;
+    height: 50%;
+    cursor: pointer;
 }
 
 .header__nav-list > li > p {
@@ -72,13 +73,14 @@ header > div {
     position: relative;
     cursor: pointer;
     user-select: none;
-    top: 25px;
+    height: 25px;
+    top: 10px;
 }
 
 .header__list-icon {
     position: relative;
     font-size: 18px;
     cursor: pointer;
-    top: 25px;
+    top: 12px;
     color: #f3f3f3
 }

@@ -34,7 +34,7 @@ export function Header() {
     return (
         <header>
             <div className="header__logo-container">
-                <Link to="/" className="logo__link">
+                <Link to="/#topComponent" className="logo__link">
                     <h1 className="logo__text">
                     Quilmes
                     </h1>
@@ -53,7 +53,7 @@ export function Header() {
                     </li>
                     <li onMouseOver={handleCompromisoPopUpMouseOver} onMouseLeave={handleCompromisoPopUpMouseLeave}>
                         <p  >
-                            COMPROMISO
+                            COMPROMISOS
                         </p>
                         <div className="header__list-icon">
                             {compromisoPopUp ? headerIcons.upArrow : headerIcons.downArrow}
@@ -67,11 +67,7 @@ export function Header() {
                     </li>
                 </ul>
             </nav>
-            <div className="header__menu">
-                <div>
-                    {headerIcons.menuBars}
-                </div>
-            </div>
+            <div className="header__menu"></div>
             
         </header>
     );
