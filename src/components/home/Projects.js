@@ -1,18 +1,17 @@
-import './proyectos.css';
-import './styles.css';
-import bars from './assets/img/bars.svg';
+import './projects.css';
+import '../styles.css';
+import bars from '../../assets/img/bars.svg';
 import {useState} from 'react';
 
-
-import logoSeguridad from './assets/img/seguridad.svg';
-import logoEducation from './assets/img/educacion.svg';
-import logoImpositivo from './assets/img/impositivo.svg';
-import logoSalud from './assets/img/salud.svg';
-import logoNull from './assets/img/seguridad.svg';
-
+import logoSeguridad from '../../assets/img/seguridad.svg';
+import logoEducation from '../../assets/img/educacion.svg';
+import logoImpositivo from '../../assets/img/impositivo.svg';
+import logoSalud from '../../assets/img/salud.svg';
+import logoNull from '../../assets/img/seguridad.svg';
 
 
-export function Proyectos () {
+
+export function Projects () {
     const [contenidoRecuadro, setContenidoRecuadro] = useState(undefined);
     const [cajaIluminada, setCajaIluminada] = useState(undefined);
 

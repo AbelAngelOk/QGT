@@ -1,11 +1,13 @@
-import  FirstCardCompromisos  from "./FirstCardCompromisos";
-import  SecondCardCompromisos  from "./SecondCardCompromisos";
-import "./compromiso.css";
-import { Banner } from "./Banner";
+import  FirstCardPromises  from "../components/promises/FirstCardPromises";
+import  SecondCardPromises  from "../components/promises/SecondCardPromises";
+import { Banner } from "../components/promises/Banner";
+
+import "./promises.css";
+
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
-export const Compromiso = () => {
+export const Promises = () => {
     const location = useLocation();
 
     useEffect(() => {   
@@ -23,10 +25,10 @@ export const Compromiso = () => {
             <Banner />
             <section className="compromiso__cards-container">
                 <div className="compromiso__first-card-container" id="finance">
-                    <FirstCardCompromisos />
+                    <FirstCardPromises />
                 </div>
                 <div className="compromiso__second-card-container" id="identity" >
-                    <SecondCardCompromisos />
+                    <SecondCardPromises />
                 </div>          
             </section>
         </div>

@@ -1,8 +1,8 @@
-import './team2.css';
-import './styles.css';
-import linkedin from './assets/img/linkedin.svg';
-import ammaturoImg from './assets/img/ammaturo_v2.png';
-import alfasetti from './assets/img/alfasetti.png';
+import './team.css';
+import '../styles.css';
+import linkedin from '../../assets/img/linkedin.svg';
+import ammaturoImg from '../../assets/img/ammaturo_v2.png';
+import alfasetti from '../../assets/img/alfasetti.png';
 
 //const exampleImg01 = "https://arbusta.net/wp-content/uploads/2023/01/Emiliano-Fazio-300x300.png"
 //const exampleImg02 = "https://arbusta.net/wp-content/uploads/2023/01/Emiliano-Fazio-300x300.png";

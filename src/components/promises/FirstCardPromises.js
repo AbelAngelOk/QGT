@@ -1,6 +1,6 @@
-import "./firstCardCompromisos.css";
+import "./firstCardPromises.css";
 
-const FirstCardCompromisos = () => {
+const FirstCardPromises = () => {
     return(
         <div className="first-card__total-container">
             <div className="first-card__container">
@@ -28,4 +28,4 @@ const FirstCardCompromisos = () => {
     )
 }
 
-export default FirstCardCompromisos;
+export default FirstCardPromises;

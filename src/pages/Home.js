@@ -1,10 +1,11 @@
-import { Hero } from "./Hero.js";
-import { Team } from "./Team2.js";
-import { Proyectos } from "./Proyectos.js";
+import { Hero } from "../components/home/Hero.js";
+import { Team } from "../components/home/Team.js";
+import { Projects } from "../components/home/Projects.js";
+
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
-export const Main = () => {
+export const Home = () => {
     const location = useLocation();
 
     useEffect(() => {
@@ -15,7 +16,7 @@ export const Main = () => {
         <div>
             <Hero />
             <Team />
-            <Proyectos />
+            <Projects />
         </div>
     )
 };

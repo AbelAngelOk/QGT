@@ -1,8 +1,10 @@
 import "./App.css";
-import { Header } from "./Header";
-import { Main } from "./Main";
+import { Header } from "./components/commons/Header";
+import { Home } from "./pages/Home";
+import { Promises } from "./pages/Promises";
+import { Reports } from "./pages/Reports";
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Compromiso } from "./Compromiso";
 
 function App() {
 
@@ -13,8 +15,9 @@ function App() {
           <Header/>
         </div>
         <Routes>        
-          <Route path="/" element={<Main />} />
-          <Route path="/Compromiso" element={<Compromiso />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/Compromiso" element={<Promises />} />
+          <Route path="/Informes" element={<Reports />} />
         </Routes>
       </Router>
     </div>
