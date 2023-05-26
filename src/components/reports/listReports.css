@@ -1,10 +1,5 @@
 @import "../styles.css";
 
-* {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .listReports {
     width: 100%;
     height: auto;
@@ -12,6 +7,8 @@
     align-items: center;
     justify-content: center;
     background-color: var(--background02);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .listReports--table {
@@ -19,12 +16,16 @@
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px white;
     background-color: var(--background03);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .listReports--titleCols,
 .listReports--row {
     padding: 5px;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .listReports--titleCols--inner,
@@ -34,14 +35,20 @@
     border-radius: 10px;
     align-items: center;
     justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .field {
     width: 10%;
     color: var(--text01);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .fieldLarge {
     width: 50%;
     color: var(--text01);
+    display: flex;
+    flex-wrap: wrap;
 }

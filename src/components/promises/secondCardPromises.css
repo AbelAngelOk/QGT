@@ -63,6 +63,10 @@
     height: 327px;
 }
 
+.second-card__right-panel > div {
+    text-align: center;
+}
+
 .second-card__right-panel-logo {
     font-size: 2.5rem;
 }

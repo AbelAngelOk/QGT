@@ -1,7 +1,7 @@
 import  FirstCardPromises  from "../components/promises/FirstCardPromises";
 import  SecondCardPromises  from "../components/promises/SecondCardPromises";
-import CardPromises from "../components/promises/CardPromises";
 import { Banner } from "../components/promises/Banner";
+import { Footer } from "../components/commons/Footer";
 
 import "./promises.css";
 
@@ -22,19 +22,19 @@ export const Promises = () => {
     }, [location]);
 
     return(
-        <div className="compromiso__total-container">
-            <Banner />
-            <section className="compromiso__cards-container">
-                <CardPromises />
-                {/*
-                <div className="compromiso__first-card-container" id="finance">
-                    <FirstCardPromises />
-                </div>
-                <div className="compromiso__second-card-container" id="identity" >
-                    <SecondCardPromises />
-                </div>   
-                */}       
-            </section>
+        <div>
+            <div className="compromiso__total-container">
+                <Banner />
+                <section className="compromiso__cards-container">
+                    <div className="compromiso__first-card-container" id="finance">
+                        <FirstCardPromises />
+                    </div>
+                    <div className="compromiso__second-card-container" id="identity" >
+                        <SecondCardPromises />
+                    </div>              
+                </section>
+            </div>
+            <Footer />
         </div>
     );
 };

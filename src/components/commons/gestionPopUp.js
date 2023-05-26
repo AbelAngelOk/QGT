@@ -1,34 +1,23 @@
-import "./headerPopUp.css"
+import "./headerPopUp.css";
+import dataBoxes from "./gestionPopUp.json";
 
 export const GestionPopUp = () => {
     return(
         <div className="popUp-container">
             <ul className="popUp-list">
-                <li>
-                    <h5 className="popUp-list__box-title">LOREM</h5>
-                    <p className="popUp-list__box-text">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
-                </li>
-                <li>
-                    <h5 className="popUp-list__box-title">LOREM</h5>
-                    <p className="popUp-list__box-text">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
-                </li>
-                <li>
-                    <h5 className="popUp-list__box-title">LOREM</h5>
-                    <p className="popUp-list__box-text">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
-                </li>
-                <li>
-                    <h5 className="popUp-list__box-title">LOREM</h5>
-                    <p className="popUp-list__box-text">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
-                </li>
-                <li>
-                    <h5 className="popUp-list__box-title">LOREM</h5>
-                    <p className="popUp-list__box-text">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
-                </li>
-                <li>
-                    <h5 className="popUp-list__box-title">LOREM</h5>
-                    <p className="popUp-list__box-text">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
-                </li>
+                {createBoxes()}
             </ul>
         </div>
     );
+};
+
+const createBoxes = () => {
+    return dataBoxes.map((box, key) => {
+        return(
+            <li key={key} >
+                <h5 className="popUp-list__box-title"> {box.boxTitle} </h5>
+                <p className="popUp-list__box-text"> {box.boxText} </p>
+            </li>
+        )
+    })
 };

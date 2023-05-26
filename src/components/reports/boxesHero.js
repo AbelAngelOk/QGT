@@ -17,15 +17,15 @@ function Box () {
             <ul className="reports--box">
                 <li className="reports--box--horizontalUp">
                     <p> Solicitudes de licencias </p>
-                    <div className="reports--box--eyeLogoContainer"><img></img></div>
+                    <div className="reports--box--eyeLogoContainer"><img alt=""></img></div>
                 </li>
                 <li className="reports--box--horizontalDown">
                     <div className="reports--box--Down--left">
                         <p>16</p>
-                        <p>pendientes</p>
+                        <p>Pendientes</p>
                     </div>
                     <div className="reports--box--Down--right">
-                        <img></img>
+                        <img alt=""></img>
                     </div>
                 </li>
             </ul>

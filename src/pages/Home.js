@@ -1,6 +1,7 @@
 import { Hero } from "../components/home/Hero.js";
 import { Team } from "../components/home/Team.js";
 import { Projects } from "../components/home/Projects.js";
+import { Footer } from "../components/commons/Footer";
 
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -17,6 +18,7 @@ export const Home = () => {
             <Hero />
             <Team />
             <Projects />
+            <Footer />
         </div>
     )
 };

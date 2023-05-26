@@ -56,9 +56,9 @@ export function Header() {
                         {compromisoPopUp && <CompromisoPopUp />}
                     </li>
                     <li>
-                        <p>
+                        <Link to={"/Informes"}>
                             { data.sectionText_3 }
-                        </p>  
+                        </Link>  
                     </li>
                 </ul>
             </nav>

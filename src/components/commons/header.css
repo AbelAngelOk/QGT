@@ -76,6 +76,21 @@ header > div {
     top: 10px;
 }
 
+.header__nav-list > li > a {
+    border: none;
+    color: #f3f3f3;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    height: 25px;
+    top: 10px;
+    text-decoration: none;
+}
+
 .header__list-icon {
     position: relative;
     font-size: 18px;

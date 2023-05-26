@@ -6,18 +6,20 @@ const listReports = () => {
 
     const getListReports = () => {
         return (
-            lsReports.map( (report) => {
-                    <li className="listReports--row">
-                    <ul className="listReports--row--inner">
-                        <li className="field">{report.año}</li>
-                        <li className="field">{report.periodo}</li>
-                        <li className="fieldLarge">{report.nombre}</li>
-                        <li className="field"><a href={report.urlInforme}>descargar</a></li>
-                    </ul>
-                </li>  
+            lsReports.map( (report, key) => {
+                return(
+                    <li  key={key} className="listReports--row">
+                        <ul className="listReports--row--inner">
+                            <li className="field">{report.año}</li>
+                            <li className="field">{report.periodo}</li>
+                            <li className="fieldLarge">{report.nombre}</li>
+                            <li className="field"><a href={report.urlInforme}>descargar</a></li>
+                        </ul>
+                    </li> 
+                )
             }
         ))
-    }
+    };
 
     return (
         <section className="listReports">
@@ -34,6 +36,6 @@ const listReports = () => {
             </ul>
         </section>
     )
-}
+};
 
 export default listReports;

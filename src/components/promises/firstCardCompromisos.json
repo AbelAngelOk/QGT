@@ -1,0 +1,12 @@
+{
+    "idLogo":"0",
+    "img" : "IMAGEN",
+    "resTitle" : "Responsable",
+    "res": "Alan Benitez",
+    "secretaryTitle" : "Secretaria",
+    "secretary":"Secretaria de Modernizacion",
+    "title":"Propuesta de presentismo",
+    "descriptionFirstP":"Se propone utilizar un Enterprise Resource Planning (ERP) para la gestión de recursos humanos. Se busca un software que pueda cargar el presentismo, gestionar licencias, registrar a que se dedico cada empleado.",
+    "descriptionSecondP":"Se proponen Oddo, Clockify, Fichap para verificar el presentismo de los empleados, para cargar sus licencias y gestionar el área de recursos humanos. Ideal para distinguir un registro de quienes trabajan.",
+    "button" : "Saber mas"
+}

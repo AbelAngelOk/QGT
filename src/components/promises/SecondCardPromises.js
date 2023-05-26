@@ -1,27 +1,27 @@
-import "./secondCardPromises.css"
-import structureData from "./cardPromises.json"
+import "./secondCardPromises.css";
+import data from "./secondCardCompromisos.json";
 
-const SecondCardPromises = (project, image) => {
+const SecondCardPromises = () => {
     return(
         <div className="second-card__total-container">
             <div className="second-card__container">
                  <div className="second-card__left-panel">
-                    <h3> { project.title } </h3>
-                    <p> { project.description_p1 } </p>
-                    <p> { project.description_p1 } </p>
-                    <button> { structureData.button } </button>
+                    <h3> { data.title } </h3>
+                    <p> { data.descriptionFirstP } </p>
+                    <p> { data.descriptionSecondP } </p>
+                    <button> { data.button } </button>
                 </div>
                 <div className="second-card__right-panel">
                     <div className="second-card__right-panel-logo">
-                         { image } 
+                         { data.img } 
                     </div>
                     <div className="second-card__right-panel-upper">
-                        <h4> { structureData.txtResponsible } </h4>
-                        <p> { project.responsible } </p>
+                        <h4> { data.resTitle } </h4>
+                        <p> { data.res } </p>
                     </div>
                     <div className="second-card__right-panel-lower">
-                        <h4>{ structureData.txtResponsibleSecretariat } </h4>
-                        <p> { project.responsibleSecretariat } </p>
+                        <h4>{ data.secretaryTitle } </h4>
+                        <p> { data.secretary } </p>
                     </div>
                 </div>
 
