@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const elementRoot = document.getElementById('root');
+elementRoot.classList.add('width100');
+
 root.render(
   <React.StrictMode>
     <App />

@@ -1,0 +1,41 @@
+@import "../styles.css";
+
+* {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listReports {
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+    align-items: center;
+    background-color: var(--background02);
+}
+
+.listReports--table {
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px white;
+    background-color: var(--background03);
+}
+
+.listReports--titleCols,
+.listReports--row {
+    padding: 5px;
+    width: 100%;
+}
+
+.listReports--titleCols--inner,
+.listReports--row--inner {
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.field {
+    width: 20%;
+    color: var(--text01);
+}

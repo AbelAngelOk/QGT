@@ -1,7 +1,12 @@
-export const Reports = () => {
+import BoxesHero from "../components/reports/boxesHero";
+import ListReports from "../components/reports/listReports";
 
+export const Reports = () => {
     return(
-        <div className="">
+        <div>
+            <BoxesHero />
+            <ListReports />
         </div>
     );
 };
+

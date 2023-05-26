@@ -3,6 +3,7 @@ import { GestionPopUp } from "./gestionPopUp";
 import { CompromisoPopUp } from "./compromisoPopUp";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import data from "./header.json";
 
 export function Header() {
     const [gestionPopUp, setGestionPopUp] = useState(false);
@@ -35,26 +36,20 @@ export function Header() {
         <header>
             <div className="header__logo-container">
                 <Link to="/#topComponent" className="logo__link">
-                    <h1 className="logo__text">
-                    Quilmes
-                    </h1>
+                    <h1 className="logo__text"> { data.logoText } </h1>
                 </Link>  
             </div>
             <nav className="header__nav-container">
                 <ul className="header__nav-list">
                     <li  onMouseOver={handleGestionPopUpMouseOver} onMouseLeave={handleGestionPopUpMouseLeave}>
-                        <p>
-                            GESTIÓN
-                        </p>
-                        <div className="header__list-icon">
-                            {gestionPopUp ? headerIcons.upArrow : headerIcons.downArrow}
+                        <p> { data.sectionText_1 } </p>
+                        <div className="header__list-icon"> 
+                            {gestionPopUp ? headerIcons.upArrow : headerIcons.downArrow} 
                         </div>
-                            {gestionPopUp && <GestionPopUp />}
+                        {gestionPopUp && <GestionPopUp />}
                     </li>
                     <li onMouseOver={handleCompromisoPopUpMouseOver} onMouseLeave={handleCompromisoPopUpMouseLeave}>
-                        <p  >
-                            COMPROMISOS
-                        </p>
+                        <p>  { data.sectionText_2 } </p>
                         <div className="header__list-icon">
                             {compromisoPopUp ? headerIcons.upArrow : headerIcons.downArrow}
                         </div> 
@@ -62,7 +57,7 @@ export function Header() {
                     </li>
                     <li>
                         <p>
-                            INFORMES
+                            { data.sectionText_3 }
                         </p>  
                     </li>
                 </ul>

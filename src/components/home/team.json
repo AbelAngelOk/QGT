@@ -1,0 +1,27 @@
+[
+    {
+        "nombre":"Jose Luis Amaturo",
+        "rol":"Intendente",
+        "id":0
+    },
+    {
+        "nombre":"Estefania Alfasetti",
+        "rol":"Consejal",
+        "id":1
+    },
+    {
+        "nombre":"Alan Benitez",
+        "rol":"Ministro de seguridad",
+        "id":2
+    },
+    {
+        "nombre":"Alan Cejas",
+        "rol":"Ministro de administracion",
+        "id":3
+    },
+    {
+        "nombre":"Mateo Cao",
+        "rol":"Ministro de economia",
+        "id":4
+    }
+]

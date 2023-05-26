@@ -1,27 +1,28 @@
 import "./firstCardPromises.css";
+import structureData from "./cardPromises.json"
 
-const FirstCardPromises = () => {
+const FirstCardPromises = (project, image) => {
     return(
         <div className="first-card__total-container">
             <div className="first-card__container">
                 <div className="first-card__left-panel">
                     <div className="first-card__left-panel-logo">
-                        LOGO
+                        { image }
                     </div>
                     <div className="first-card__left-panel-upper">
-                        <h4>Solutions</h4>
-                        <p>asoidjioa asiopdjiaos oapskd</p>
+                        <h4> { structureData.txtResponsible } </h4>
+                        <p> { project.responsible } </p>
                     </div>
                     <div className="first-card__left-panel-lower">
-                        <h4>Product</h4>
-                        <p>Atala PRIsadsad asdsaSM asd</p>
+                        <h4> { structureData.txtResponsibleSecretariat } </h4>
+                        <p> { project.responsibleSecretariat } </p>
                     </div>
                 </div>
                 <div className="first-card__right-panel">
-                    <h3>Finance</h3>
-                    <p>Identity verifcation is key step before accepting new clients into financial institutions or other agencies. Simply opening a new bank account in certain countries takes weeks, for example. Other administrative processes - passport applications, for instance-, even longer. The onboading process is slow and resource-heavy, often involving multiple third parties, with their own fees, etc.</p>
-                    <p>Atala PRISM can streamline and accelerate onboarding through the uitilization of reusable verified credentials, Atala PRISM leverages blockchaing technology to deliver a one-click user experience</p>
-                    <button>Learn more</button>
+                    <h3> { project.title } </h3>
+                    <p> { project.description_p1 } </p>
+                    <p> { project.description_p2 } </p>
+                    <button> { structureData.button } </button>
                 </div>
             </div>
         </div>
