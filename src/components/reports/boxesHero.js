@@ -1,5 +1,4 @@
-import './boxes.css'
-import './threeBoxesSection.css'
+import './box.css'
 
 const boxesHero = () => {
     return (

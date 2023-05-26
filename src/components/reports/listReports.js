@@ -1,25 +1,36 @@
 import './listReports.css';
+import section from './contentsReportListSection.json';
+import lsReports from './listReports.json';
 
 const listReports = () => {
+
+    const getListReports = () => {
+        return (
+            lsReports.map( (report) => {
+                    <li className="listReports--row">
+                    <ul className="listReports--row--inner">
+                        <li className="field">{report.año}</li>
+                        <li className="field">{report.periodo}</li>
+                        <li className="fieldLarge">{report.nombre}</li>
+                        <li className="field"><a href={report.urlInforme}>descargar</a></li>
+                    </ul>
+                </li>  
+            }
+        ))
+    }
+
     return (
         <section className="listReports">
             <ul className="listReports--table">
                 <li className="listReports--titleCols"> 
                     <ul className="listReports--titleCols--inner">
-                        <li className="field">Año</li>
-                        <li className="field">Trimestre</li>
-                        <li className="field">Nombre</li>
-                        <li className="field">detalle</li>
+                        <li className="field">{section.titleColumn01}</li>
+                        <li className="field">{section.titleColumn02}</li>
+                        <li className="fieldLarge">{section.titleColumn03}</li>
+                        <li className="field">{section.titleColumn04}</li>
                     </ul>
                 </li>
-                <li className="listReports--row">
-                    <ul className="listReports--row--inner">
-                        <li className="field">2023</li>
-                        <li className="field">Q1</li>
-                        <li className="field">Informe de periodo de Enero-Marzo</li>
-                        <li className="field">descargar</li>
-                    </ul>
-                </li>
+                {getListReports()}
             </ul>
         </section>
     )

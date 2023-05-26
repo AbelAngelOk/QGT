@@ -10,6 +10,7 @@
     height: auto;
     padding: 20px 0px;
     align-items: center;
+    justify-content: center;
     background-color: var(--background02);
 }
 
@@ -36,6 +37,11 @@
 }
 
 .field {
-    width: 20%;
+    width: 10%;
+    color: var(--text01);
+}
+
+.fieldLarge {
+    width: 50%;
     color: var(--text01);
 }
