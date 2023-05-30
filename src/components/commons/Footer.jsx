@@ -15,7 +15,7 @@ export const Footer = () => {
   };
 
   return (
-    <div className="footer__container">
+    <div className="footer__container ">
       <div className="footer__upper-container">
         <div className="footer__upper-left"></div>
         <div className="footer__upper-middle">{renderIcons()}</div>

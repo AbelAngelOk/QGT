@@ -3,6 +3,8 @@ import { GestionPopUp } from "./gestionPopUp";
 import { CompromisoPopUp } from "./compromisoPopUp";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import data from "./header.json";
 
 export function Header() {
@@ -27,9 +29,8 @@ export function Header() {
 
     
     const headerIcons = {
-        "downArrow" : <ion-icon name="chevron-down-outline"></ion-icon>,
-        "upArrow" : <ion-icon name="chevron-up-outline"></ion-icon>,
-        "menuBars" : <ion-icon name="reorder-four-outline"></ion-icon>
+        "downArrow" : <FontAwesomeIcon icon={faChevronDown} />,
+        "upArrow" : <FontAwesomeIcon icon={faChevronUp} />
     };
 
     return (
@@ -49,7 +50,9 @@ export function Header() {
                         {gestionPopUp && <GestionPopUp />}
                     </li>
                     <li onMouseOver={handleCompromisoPopUpMouseOver} onMouseLeave={handleCompromisoPopUpMouseLeave}>
-                        <p>  { data.sectionText_2 } </p>
+                        <Link to={"/Compromiso#banner"}>
+                            { data.sectionText_2 }
+                        </Link>
                         <div className="header__list-icon">
                             {compromisoPopUp ? headerIcons.upArrow : headerIcons.downArrow}
                         </div> 

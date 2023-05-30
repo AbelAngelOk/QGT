@@ -24,7 +24,9 @@ export const Promises = () => {
     return(
         <div>
             <div className="compromiso__total-container">
-                <Banner />
+                <div id="banner">
+                    <Banner />
+                </div>
                 <section className="compromiso__cards-container">
                     <div className="compromiso__first-card-container" id="finance">
                         <FirstCardPromises />

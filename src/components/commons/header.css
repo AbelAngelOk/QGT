@@ -95,6 +95,7 @@ header > div {
     position: relative;
     font-size: 18px;
     cursor: pointer;
-    top: 12px;
-    color: #f3f3f3
+    top: 10px;
+    color: #f3f3f3;
+    left: 5px
 }
