@@ -1,4 +1,3 @@
-import "./header.css";
 import { GestionPopUp } from "./gestionPopUp";
 import { CompromisoPopUp } from "./compromisoPopUp";
 import { useState } from "react";
@@ -34,38 +33,38 @@ export function Header() {
     };
 
     return (
-        <header>
-            <div className="header__logo-container">
-                <Link to="/#topComponent" className="logo__link">
-                    <h1 className="logo__text"> { data.logoText } </h1>
+            <header className="flex justify-between items-center h-[90px] bg-[#282c34] shadow-md fixed  w-full z-50 font-sans box-border">
+            <div className="h-full w-[36%] flex items-center justify-center">
+                <Link to="/#topComponent" className="no-underline">
+                    <h1 className="p-0 text-[#f3f3f3] cursor-pointer select-none mb-4 mr-[90px] text-[2.5rem]"> { data.logoText } </h1>
                 </Link>  
             </div>
-            <nav className="header__nav-container">
-                <ul className="header__nav-list">
-                    <li  onMouseOver={handleGestionPopUpMouseOver} onMouseLeave={handleGestionPopUpMouseLeave}>
-                        <p> { data.sectionText_1 } </p>
-                        <div className="header__list-icon"> 
+            <nav className="w-[28%] h-full">
+                <ul className="h-full flex list-none justify-around items-center">
+                    <li className="flex h-1/2 cursor-pointer" onMouseOver={handleGestionPopUpMouseOver} onMouseLeave={handleGestionPopUpMouseLeave}>
+                        <p className="border-none text-[#f3f3f3] text-xl tracking-[2px] font-bold relative cursor-pointer select-none h-6 top-[10px]"> { data.sectionText_1 } </p>
+                        <div className="relative text-xl cursor-pointer top-3 text-[#f3f3f3] left-1"> 
                             {gestionPopUp ? headerIcons.upArrow : headerIcons.downArrow} 
                         </div>
                         {gestionPopUp && <GestionPopUp />}
                     </li>
-                    <li onMouseOver={handleCompromisoPopUpMouseOver} onMouseLeave={handleCompromisoPopUpMouseLeave}>
-                        <Link to={"/Compromiso#banner"}>
+                    <li className="flex h-1/2 cursor-pointer" onMouseOver={handleCompromisoPopUpMouseOver} onMouseLeave={handleCompromisoPopUpMouseLeave}>
+                        <Link className="border-none text-[#f3f3f3] text-xl tracking-[2px] font-bold relative cursor-pointer select-none h-6 top-[10px] no-underline " to={"/Compromiso#banner"}>
                             { data.sectionText_2 }
                         </Link>
-                        <div className="header__list-icon">
+                        <div className="relative text-xl cursor-pointer top-3 text-[#f3f3f3] left-1">
                             {compromisoPopUp ? headerIcons.upArrow : headerIcons.downArrow}
                         </div> 
                         {compromisoPopUp && <CompromisoPopUp />}
                     </li>
-                    <li>
-                        <Link to={"/Informes"}>
+                    <li className="flex h-1/2 cursor-pointer">
+                        <Link className="border-none text-[#f3f3f3] text-xl tracking-[2px] font-bold relative cursor-pointer select-none h-6 top-[10px] no-underline " to={"/Informes"}>
                             { data.sectionText_3 }
                         </Link>  
                     </li>
                 </ul>
             </nav>
-            <div className="header__menu"></div>
+            <div className="w-[36%]"></div>
             
         </header>
     );

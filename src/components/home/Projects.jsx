@@ -13,8 +13,8 @@ import logoNull from '../../assets/img/seguridad.svg';
 const urlImagenes = [logoSeguridad, logoImpositivo, logoSalud, logoEducation, logoNull]
 
 export function Projects () {
-    const [contenidoRecuadro, setContenidoRecuadro] = useState(undefined);
-    const [cajaIluminada, setCajaIluminada] = useState(undefined);
+    const [contenidoRecuadro, setContenidoRecuadro] = useState(<ContenidoDetalleProyecto titulo={projects[0].titulo} descripccion={projects[0].description} imagen={urlImagenes[0]} />);
+    const [cajaIluminada, setCajaIluminada] = useState(0);
 
     const titulo_de_seccion_proyectos = "Nuestras Propuestas";
     const descripcion_de_proyectos = "Nuestro compromiso es mejorar la calidad de vida de cada ciudadano de Quilmes. Nuestra misión consiste en impulsar los aspectos fundamentales, como la seguridad, la educación, el fomento de la industria y el enriquecimiento de Quilmes. Para lograrlo, hemos planificado múltiples proyectos que, individualmente, contribuyen significativamente a la calidad de vida y, en conjunto, se refuerzan mutuamente para mejorar todos los aspectos.";
@@ -55,7 +55,7 @@ export function Projects () {
 const CreateBoxes = (props) => {
     return projects.map( (p, key) => {                      
         return (
-            <li key={key} className={`proyectos--box ${props.cajaIluminada === p.id ? "sombreado" : "" }`} onClick={ () => props.manejarClick(<ContenidoDetalleProyecto titulo={p.titulo} descripccion={p.description} imagen={urlImagenes[p.id]} />, p.id) }> 
+            <li key={key} className={`proyectos--box ${props.cajaIluminada === key ? "sombreado" : "" }`} onClick={ () => props.manejarClick(<ContenidoDetalleProyecto titulo={p.titulo} descripccion={p.description} imagen={urlImagenes[p.id]} />, key) }> 
                 { contenidoCajasSeccionProyectos(urlImagenes[p.id], p.titulo) } 
             </li> 
         )
