@@ -1,3 +1,7 @@
+2-06-2023
+
+Estilos de página compromisos, app, footer y header convertidos a tailwind, instalé eslint standard, te ayuda a identar y escribir código más prolijo. Se instala con "npm install standard -D" e instalando también una extensión en el visual que se llama ESLint.
+
 26-05-2023
 
 Pude solucionar el problema con el Header, si no me equivoco en los map() faltaba el return dentro de la función
