@@ -1,3 +1,11 @@
+9-06-2023
+
+Sección Secretarias creada.
+Encontré una forma de importar imagenes desde el json, se puede hacer de esta manera: 
+/*<img src={import.meta.env.BASE_URL + dirección relativa a la carpeta principal del proyecto}*/
+La expresión import.meta.env.BASE_URL es una forma de acceder a la variable BASE_URL definida en el entorno de ejecución de la aplicación. En el contexto de una aplicación React, esta variable generalmente se utiliza para obtener la URL base del servidor o la ubicación del directorio raíz de la aplicación.
+En el JSON, entonces, hay que poner la dirección de la imagen desde el directorio raíz.
+
 2-06-2023
 
 Estilos de página compromisos, app, footer y header convertidos a tailwind, instalé eslint standard, te ayuda a identar y escribir código más prolijo. Se instala con "npm install standard -D" e instalando también una extensión en el visual que se llama ESLint.
