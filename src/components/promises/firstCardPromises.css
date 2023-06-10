@@ -1,0 +1,101 @@
+@import "../styles.css";
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.first-card__total-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 65%;
+    margin-top: 30px;
+    justify-content: center;
+    margin: 0px auto 15px auto;
+}
+
+
+
+.first-card__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.first-card__left-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: 327px;
+}
+
+.first-card__left-panel > div {
+    text-align: center;
+}
+
+.first-card__left-panel-logo {
+    font-size: 2.5rem;
+    margin-top: 8px;
+}
+
+.first-card__left-panel-upper > h4 {
+    color: #727272;
+    margin-bottom: 8px;
+    font-weight: 300;
+}
+
+.first-card__left-panel-upper > p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.first-card__left-panel-lower > h4 {
+    color: #727272;
+    margin-bottom: 8px;
+    font-weight: 300;
+}
+
+.first-card__left-panel-lower > p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.first-card__right-panel {
+    width: 60%;
+}
+
+.first-card__right-panel > h3 {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+    color: #295eda;
+}
+
+.first-card__right-panel > p {
+    text-align: justify;
+    line-height: 22px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.first-card__right-panel > button {
+    background-color: #0033ad;
+    border: none;
+    border-radius: 12px;
+    height: 45px;
+    width: 140px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.first-card__right-panel > button:hover {
+    background-color: #204cfa;
+}

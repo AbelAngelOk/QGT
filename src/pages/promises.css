@@ -1,0 +1,12 @@
+@import "../index.css";
+
+.compromiso__cards-container {
+    display: flex;
+    align-items: center;
+    background-color: #282c34;
+    flex-direction: column;
+}
+
+.compromiso__first-card-container {
+    background-color: var(--background01);
+}
