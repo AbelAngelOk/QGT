@@ -21,12 +21,12 @@ export const Footer = () => {
         <div className="footer__upper-middle">{renderIcons()}</div>
         <div className="footer__upper-right"></div>
       </div>
-      <div className="footer__bottom-container">
-        <h3>{footerData.title}</h3>
-        <p>{footerData.copyright}</p>
-        <div className="footer__bottom-links">
-          <a href="/">{footerData.legal}</a>
-          <a href="/">{footerData.priv}</a>
+      <div className='self-center mt-5 text-center'>
+        <h3 className='tracking-[3px] text-[1.8rem] text-[#cdd9e8]'>{footerData.title}</h3>
+        <p className='text-[0.9rem] text-[#cdd9e8] mt-[15px]'>{footerData.copyright}</p>
+        <div className='flex'>
+          <a className='py-0 px-10 text-[#cdd9e8] text-[0.9rem] mt-[15px] border-r-[1px] border-r-[#cdd9e8] underline font-bold' href='/'>{footerData.legal}</a>
+          <a className='py-0 px-10 text-[#cdd9e8] text-[0.9rem] mt-[15px] underline font-bold' href='/'>{footerData.priv}</a>
         </div>
       </div>
     </div>

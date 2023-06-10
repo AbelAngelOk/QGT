@@ -27,16 +27,16 @@ export const Promises = () => {
                 <div id="banner">
                     <Banner />
                 </div>
-                <section className="compromiso__cards-container">
-                    <div className="compromiso__first-card-container" id="finance">
-                        <FirstCardPromises />
-                    </div>
-                    <div className="compromiso__second-card-container" id="identity" >
-                        <SecondCardPromises />
-                    </div>              
-                </section>
-            </div>
-            <Footer />
-        </div>
-    );
-};
+        <section className='flex items-center flex-col'>
+          <div className='w-full bg-[#f7f8f9] dark:bg-[rgb(55,65,81)]' id='finance'>
+            <FirstCardPromises />
+          </div>
+          <div className='w-full bg-[#ffffff] dark:bg-[#282c34]' id='identity'>
+            <SecondCardPromises />
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </div>
+  )
+}
