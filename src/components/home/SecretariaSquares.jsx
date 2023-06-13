@@ -24,7 +24,7 @@ export const SquareLogo = ({ img, title }) => {
 export const SquareImg = ({ img }) => {
   return (
     <div className='h-full'>
-      <img className='w-full h-full object-cover' src={import.meta.env.BASE_URL + img} alt='ciudad' />
+      <img className='w-full h-full object-cover' src={img} alt='ciudad' />
     </div>
   )
 }
