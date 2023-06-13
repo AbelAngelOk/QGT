@@ -9,11 +9,11 @@ import { useEffect } from 'react'
 import { MisionVisionValores } from '../components/home/MisionVisionValores.jsx'
 
 export const Home = () => {
-    const location = useLocation();
+  const location = useLocation()
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [location]);
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location])
 
   return (
     <div className='bg-[#eeeeee] dark:bg-[#282c34]'>

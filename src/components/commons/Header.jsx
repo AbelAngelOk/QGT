@@ -5,33 +5,32 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import data from './header.json'
-import { DarkMode } from '../context/darkMode'
+import { DarkMode } from '../context/DarkMode'
 
-export function Header() {
-    const [gestionPopUp, setGestionPopUp] = useState(false);
-    const [compromisoPopUp, setCompromisoPopUp] = useState(false);
+export function Header () {
+  const [gestionPopUp, setGestionPopUp] = useState(false)
+  const [compromisoPopUp, setCompromisoPopUp] = useState(false)
 
-    const handleGestionPopUpMouseOver = () => {
-        setGestionPopUp(true);
-    };
+  const handleGestionPopUpMouseOver = () => {
+    setGestionPopUp(true)
+  }
 
-    const handleGestionPopUpMouseLeave = () => {
-        setGestionPopUp(false);
-    };
+  const handleGestionPopUpMouseLeave = () => {
+    setGestionPopUp(false)
+  }
 
-    const handleCompromisoPopUpMouseOver = () => {
-        setCompromisoPopUp(true);
-    };
-    
-    const handleCompromisoPopUpMouseLeave = () => {
-        setCompromisoPopUp(false);
-    };
+  const handleCompromisoPopUpMouseOver = () => {
+    setCompromisoPopUp(true)
+  }
 
-    
-    const headerIcons = {
-        "downArrow" : <FontAwesomeIcon icon={faChevronDown} />,
-        "upArrow" : <FontAwesomeIcon icon={faChevronUp} />
-    };
+  const handleCompromisoPopUpMouseLeave = () => {
+    setCompromisoPopUp(false)
+  }
+
+  const headerIcons = {
+    downArrow: <FontAwesomeIcon icon={faChevronDown} />,
+    upArrow: <FontAwesomeIcon icon={faChevronUp} />
+  }
 
   return (
     <header className='flex justify-around items-center h-[90px] bg-[#ffffff] dark:bg-[#282c34] shadow-md fixed  w-full z-50 font-sans box-border'>

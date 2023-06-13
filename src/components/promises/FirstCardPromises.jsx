@@ -1,4 +1,4 @@
-import data from "./firstCardCompromisos.json";
+import data from './firstCardCompromisos.json'
 
 export const FirstCardPromises = () => {
   return (
@@ -28,4 +28,4 @@ export const FirstCardPromises = () => {
   )
 }
 
-export default FirstCardPromises;
+export default FirstCardPromises

@@ -10,8 +10,8 @@
 // export const Promises = () => {
 //     const location = useLocation();
 
-//     useEffect(() => {   
-//         const { hash } = location;   
+//     useEffect(() => {
+//         const { hash } = location;
 //         if (hash) {
 //             const element = document.querySelector(hash);
 //             if (element) {
@@ -29,7 +29,7 @@
 //                 <section className="compromiso__cards-container">
 //                     <div className="compromiso__first-card-container" id="finance">
 //                         <CardsPromises />
-//                     </div>              
+//                     </div>
 //                 </section>
 //             </div>
 //             <Footer />

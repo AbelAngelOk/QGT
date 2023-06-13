@@ -3,7 +3,7 @@
 // //import './secondCardPromises.css';
 
 // /* Guarda una lista de secciones de tipo a y b de compromisos de forma intercalada */
-// let LsPromisesInt = []; 
+// let LsPromisesInt = [];
 
 // /* recorre promisesCards.json para construir la lista de secciones */
 // const CardsPromises = () => {
@@ -16,7 +16,7 @@
 
 //     console.log(compromiso)
 //     return ( firstCardPromises(compromiso) )
-    
+
 //     /*
 //     let DebeCrearseLaPrimerCard = true;
 
@@ -72,7 +72,7 @@
 //                 </div>
 //                 <div className="second-card__right-panel">
 //                     <div className="second-card__right-panel-logo">
-//                          { data.img } 
+//                          { data.img }
 //                     </div>
 //                     <div className="second-card__right-panel-upper">
 //                         <h4> { data.resTitle } </h4>

@@ -1,5 +1,5 @@
-import "./banner.css";
-import b from "./banner.json";
+import './banner.css'
+import b from './banner.json'
 
 export function Banner () {
   return (
