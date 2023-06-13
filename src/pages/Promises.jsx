@@ -1,5 +1,5 @@
-import  FirstCardPromises  from "../components/promises/FirstCardPromises";
-import  SecondCardPromises  from "../components/promises/SecondCardPromises";
+import  {FirstCardPromises}  from "../components/promises/FirstCardPromises";
+import  {SecondCardPromises}  from "../components/promises/SecondCardPromises";
 import { Banner } from "../components/promises/Banner";
 import { Footer } from "../components/commons/Footer";
 
