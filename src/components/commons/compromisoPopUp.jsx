@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom'
-import dataBoxes from './promisesPopUp.json'
+import "./headerPopUp.css";
+import { Link } from "react-router-dom";
+import dataBoxes from "./promisesPopUp.json";
 
 export const CompromisoPopUp = () => {
   return (

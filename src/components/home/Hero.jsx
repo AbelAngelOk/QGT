@@ -1,6 +1,6 @@
-import './hero.css'
-import h from './hero.json'
-export function Hero () {
+import './hero.css';
+import h from './hero.json';
+export function Hero() {
   return (
     <div className='w-full h-[700px] flex flex-wrap'>
       <div className='py-[100px] w-full h-auto bg-[#f7f8f9] dark:bg-[#282c34] text-[#41454b] dark:text-[#ffffff] flex justify-center items-center flex-wrap'>
@@ -16,5 +16,5 @@ export function Hero () {
         </ul>
       </div>
     </div>
-  )
+  );
 }

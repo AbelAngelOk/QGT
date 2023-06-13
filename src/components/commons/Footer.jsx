@@ -1,24 +1,25 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
-import footerData from './footerData.json'
+import "./footer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import footerData from "./footerData.json";
 
-const icons = [{ svg: faFacebook, url: 'facebook' }, { svg: faInstagram, url: 'instagram' }, { svg: faLinkedin, url: 'linkedin' }, { svg: faTwitter, url: 'twitter' }, { svg: faYoutube, url: 'youtube' }]
+const icons = [{svg: faFacebook,url: "facebook"}, {svg: faInstagram,url: "instagram"}, {svg: faLinkedin,url: "linkedin"}, {svg: faTwitter,url: "twitter"}, {svg: faYoutube,url: "youtube"}];
 
 export const Footer = () => {
   const renderIcons = () => {
     return icons.map((icon, key) => (
-      <a className='text-[#cdd9e8] hover:text-[#e7eaee]' key={key} rel='noreferrer' target='_blank' href={`https://www.${icon.url}.com/`}>
-        <FontAwesomeIcon className='text-[2.3rem]' icon={icon.svg} />
+      <a key={key} rel="noreferrer" target="_blank" href={`https://www.${icon.url}.com/`}>
+        <FontAwesomeIcon className="footer__icon" icon={icon.svg} />
       </a>
-    ))
-  }
+    ));
+  };
 
   return (
-    <div className='bg-[#2e3f51] flex flex-col h-[280px] p-6'>
-      <div className='flex justify-around mt-[10px]'>
-        <div className='border-b-[1px] border-b-[#cdd9e8] w-[35%]' />
-        <div className='flex justify-around w-[26%] text-[#cdd9e8]'>{renderIcons()}</div>
-        <div className='border-b-[1px] border-b-[#cdd9e8] w-[35%]' />
+    <div className="footer__container ">
+      <div className="footer__upper-container">
+        <div className="footer__upper-left"></div>
+        <div className="footer__upper-middle">{renderIcons()}</div>
+        <div className="footer__upper-right"></div>
       </div>
       <div className='self-center mt-5 text-center'>
         <h3 className='tracking-[3px] text-[1.8rem] text-[#cdd9e8]'>{footerData.title}</h3>
@@ -29,5 +30,5 @@ export const Footer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

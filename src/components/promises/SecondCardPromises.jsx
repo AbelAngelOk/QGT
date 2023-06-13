@@ -1,4 +1,4 @@
-import data from './secondCardCompromisos.json'
+import data from "./secondCardCompromisos.json";
 
 const SecondCardPromises = () => {
   return (
@@ -24,9 +24,9 @@ const SecondCardPromises = () => {
           </div>
         </div>
 
-      </div>
-    </div>
-  )
+            </div>
+        </div>
+    )
 }
 
-export default SecondCardPromises
+export default SecondCardPromises;
