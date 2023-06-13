@@ -6,6 +6,7 @@ import { Secretarias } from '../components/home/Secretarias.jsx'
 
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
+import { MisionVisionValores } from '../components/home/MisionVisionValores.jsx'
 
 export const Home = () => {
   const location = useLocation()
@@ -15,9 +16,10 @@ export const Home = () => {
   }, [location])
 
   return (
-    <div className='bg-[#f7f8f9] dark:bg-[#282c34]'>
+    <div className='bg-[#eeeeee] dark:bg-[#282c34]'>
       <Hero />
       <Team />
+      <MisionVisionValores />
       <Secretarias />
       <Projects />
       <Footer />
