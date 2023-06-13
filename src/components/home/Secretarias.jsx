@@ -1,9 +1,9 @@
 import data from './secretarias.json'
-import { SquareImg, SquareLogo, SquarePhrase, SquareText } from './Squares'
+import { SquareImg, SquareLogo, SquarePhrase, SquareText } from './SecretariaSquares'
 
 export const Secretarias = () => {
   return (
-    <section className='grid 2xl:grid-cols-[repeat(4,_280px)] grid-cols-[repeat(4,_250px)] 2xl:grid-rows-[repeat(4,_280px)] grid-rows-[repeat(4,_250px)] mx-auto my-8 w-fit'>
+    <section className='grid grid-cols-[repeat(4,_minmax(0,_17vw))] grid-rows-[repeat(4,_minmax(0,_17vw))] mx-auto my-8 w-fit'>
       {data.map(content => {
         return (
           <div key={content.id}>

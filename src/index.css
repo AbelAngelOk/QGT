@@ -20,3 +20,15 @@ code {
 head {
   display: none;
 }
+
+@layer utilities {
+  .bg-mision-image {
+    background-image: url('./assets/img/mision-vision-valores/01.jpeg');
+  }
+  .bg-vision-image {
+    background-image: url('./assets/img/mision-vision-valores/02.jpg');
+  }
+  .bg-valores-image {
+    background-image: url('./assets/img/mision-vision-valores/03.jpg');
+  }
+}
