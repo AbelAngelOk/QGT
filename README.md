@@ -1,4 +1,64 @@
-9-06-2023
+# Quilmes Gestion Transparente
+
+## Descarga e Instalacion 
+
+### precondiciones
+- tener instalado git
+- tener instalado npm
+- tener visual studio code (recomendado)
+  
+### Descarga 
+Al abrir Git Bash:
+1. ``` git clone url ``` para descargar el proyecto
+2. ``` git checkout develop ``` para crear una carpeta de la rama develop
+3. ``` git pull origin develop ``` para traer contenido de la rama develop a la pc
+
+### Instalacion proyecto y liberias
+Al abrir cmd desde la carpeta o dentro del proyecto
+1. ``` npm install ``` para instalar vite (dato que reconoce que es un proyecto Vite)
+2. ``` npm install react-router-dom ``` para instalar paquete de rutas
+3. ``` npm install -D tailwindcss postcss autoprefixer ``` para instalar paquete de estilos
+4. ``` npx tailwindcss init -p ``` para iniciar archivos configurables del paquete de estilos
+
+En lugar de utilizar los comandos tambien se puede optar por ejecutar el archivo **install.bat**
+
+## Sobre el proyecto
+
+### Tecnologias utilizadas
+- React con Vite
+- Tailwind
+- router dom
+
+## Estructura
+```
+| src
+| | assets
+| | | img |
+| | components
+| | | commons |
+| | | context |
+| | | deprecated |
+| | | home |
+| | | promises |
+| | | reports |
+| | pages
+| | | home.jsx
+| | | promises.jsx
+| | | reports.jsx
+| app.jsx
+| index.jsx
+| main.jsx
+(archivos de config)
+
+**main.jsx --> App.jsx --> | pages | --> | components |
+**
+```
+
+
+
+## Historial de comentarios importantes
+
+ ### 9-06-2023
 
 Sección Secretarias creada.
 Encontré una forma de importar imagenes desde el json, se puede hacer de esta manera: 
@@ -6,11 +66,11 @@ Encontré una forma de importar imagenes desde el json, se puede hacer de esta m
 La expresión import.meta.env.BASE_URL es una forma de acceder a la variable BASE_URL definida en el entorno de ejecución de la aplicación. En el contexto de una aplicación React, esta variable generalmente se utiliza para obtener la URL base del servidor o la ubicación del directorio raíz de la aplicación.
 En el JSON, entonces, hay que poner la dirección de la imagen desde el directorio raíz.
 
-2-06-2023
+### 2-06-2023
 
 Estilos de página compromisos, app, footer y header convertidos a tailwind, instalé eslint standard, te ayuda a identar y escribir código más prolijo. Se instala con "npm install standard -D" e instalando también una extensión en el visual que se llama ESLint.
 
-26-05-2023
+### 26-05-2023
 
 Pude solucionar el problema con el Header, si no me equivoco en los map() faltaba el return dentro de la función
 map(), por eso no se renderizaba el popup.
