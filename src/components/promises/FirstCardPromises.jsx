@@ -1,6 +1,4 @@
-import data from './firstCardCompromisos.json'
-
-export const FirstCardPromises = () => {
+export const FirstCardPromises = (data) => {
   return (
     <div className='flex items-center justify-center bg-[#f7f8f9] dark:bg-[rgb(55,65,81)] h-[600px] w-[65%] mb-[15px] mx-auto'>
       <div className='flex items-center justify-around w-4/5'>

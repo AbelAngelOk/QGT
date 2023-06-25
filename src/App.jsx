@@ -1,4 +1,3 @@
-import "./App.css";
 import { Header } from "./components/commons/Header";
 import { Home } from "./pages/Home";
 import { Promises } from "./pages/Promises";
@@ -9,9 +8,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
 
   return (
-    <div className="App">
+    <div className="w-full">
       <Router>
-        <div className="header__container" id="topHeader">
+        <div className="w-[90%]" id="topHeader">
           <Header/>
         </div>
         <Routes>        
@@ -23,5 +22,6 @@ function App() {
     </div>
   );
 };
+
 
 export default App;

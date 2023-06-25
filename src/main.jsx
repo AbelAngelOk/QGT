@@ -6,7 +6,7 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const elementRoot = document.getElementById('root');
-elementRoot.classList.add('width100');
+elementRoot.classList.add('w-full');
 
 root.render(
   <React.StrictMode>

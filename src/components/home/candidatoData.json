@@ -1,0 +1,28 @@
+{
+    "title":"Soy José Luis Ammaturo",
+    "imgUrl":"../src/assets/img/ammaturoCandidato.webp",
+    "text":[
+        {
+            "id":"1",
+            "type":"p",
+            "content":"Vivo en Quilmes desde que nací. Desde hace más de 30 años estoy dando mi apoyo para que las ideas de la libertad logren prevalecer en mi amado país, Argentina."
+        },
+        {
+            "id":"2",
+            "type":"p",
+            "content":"Soy ingeniero, trabajé toda mi vida en el sector privado. Tengo una empresa en el parque industrial de Quilmes donde damos trabajo a más de 60 personas."
+        },
+
+        {
+            "id":"3",
+            "type":"b",
+            "content":"Hoy decido dar un paso al frente, involucrarme y comprometerme en esta lucha por la República y la Libertad de la mano de Javier Milei"
+        },
+
+        {
+            "id":"4",
+            "type":"p",
+            "content":"Acompañado de un equipo idóneo de profesionales, estoy seguro de que puedo tomar las decisiones políticas necesarias para que nuestro querido Quilmes se convierta en la sociedad Segura, Próspera y Justa que siempre debió ser."
+        }
+    ]
+}
