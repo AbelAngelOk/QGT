@@ -1,4 +1,3 @@
-import './headerPopUp.css'
 import { Link } from 'react-router-dom'
 import dataBoxes from './promisesPopUp.json'
 

@@ -1,92 +1,89 @@
-import './projects.css';
-import '../styles.css';
-import bars from '../../assets/img/bars.svg';
-import {useState} from 'react';
+import bars from '../../assets/img/bars.svg'
+import { useState } from 'react'
 
-import projects from './projects.json';
-import logoSeguridad from '../../assets/img/seguridad.svg';
-import logoEducation from '../../assets/img/educacion.svg';
-import logoImpositivo from '../../assets/img/impositivo.svg';
-import logoSalud from '../../assets/img/salud.svg';
-import logoNull from '../../assets/img/seguridad.svg';
+import projects from './projects.json'
+import logoSeguridad from '../../assets/img/seguridad.svg'
+import logoEducation from '../../assets/img/educacion.svg'
+import logoImpositivo from '../../assets/img/impositivo.svg'
+import logoSalud from '../../assets/img/salud.svg'
 
-const urlImagenes = [logoSeguridad, logoImpositivo, logoSalud, logoEducation, logoNull]
+const urlImagenes = [logoSeguridad, logoImpositivo, logoSalud, logoEducation, logoSeguridad]
 
 export function Projects () {
-    const [contenidoRecuadro, setContenidoRecuadro] = useState(<ContenidoDetalleProyecto titulo={projects[0].titulo} descripccion={projects[0].description} imagen={urlImagenes[0]} />);
-    const [cajaIluminada, setCajaIluminada] = useState(0);
+  const [contenidoRecuadro, setContenidoRecuadro] = useState(<ContenidoDetalleProyecto titulo={projects[0].titulo} descripccion={projects[0].description} imagen={urlImagenes[0]} />)
+  const [cajaIluminada, setCajaIluminada] = useState(0)
 
-    const titulo_de_seccion_proyectos = "Nuestras Propuestas";
-    const descripcion_de_proyectos = "Nuestro compromiso es mejorar la calidad de vida de cada ciudadano de Quilmes. Nuestra misión consiste en impulsar los aspectos fundamentales, como la seguridad, la educación, el fomento de la industria y el enriquecimiento de Quilmes. Para lograrlo, hemos planificado múltiples proyectos que, individualmente, contribuyen significativamente a la calidad de vida y, en conjunto, se refuerzan mutuamente para mejorar todos los aspectos.";
-    
-    //Actualiza el componente en la caja de detalle de la sección proyectos, llama a la función para manejar la iluminación
-    const manejarClick = (componente, index) => {
-        setContenidoRecuadro(componente);
-        setCajaIluminada(index);
-    };
-    
-    return (
-        <section className='proyectos'>
-            <ul className='proyectos--inner'>
-                <li className='proyectos--title'>
-                    <h1> { titulo_de_seccion_proyectos }</h1>
-                </li>
-                <li className='proyectos--description'>
-                    <p> { descripcion_de_proyectos } </p>
-                </li>
-                <li className='proyectos--tab'>
-                    <img src={bars} className='proyectos--tab--icon' alt="barras"/>
-                </li>
-                <li className='proyectos--containerBox'>
-                    <ul className='proyectos--containerBox__ul'>
-                        <CreateBoxes cajaIluminada={cajaIluminada}  manejarClick={manejarClick}/>
-                    </ul>
-                </li>
-                <li className='proyectos--detalle'>
-                    <div className='proyectos--TablaDetalle'>
-                        {contenidoRecuadro}            
-                    </div>
-                </li>
-            </ul>
-        </section>
-    );
+  const tituloDeSeccionProyectos = 'Nuestras Propuestas'
+  const descripcionProyectos = 'Nuestro compromiso es mejorar la calidad de vida de cada ciudadano de Quilmes. Nuestra misión consiste en impulsar los aspectos fundamentales, como la seguridad, la educación, el fomento de la industria y el enriquecimiento de Quilmes. Para lograrlo, hemos planificado múltiples proyectos que, individualmente, contribuyen significativamente a la calidad de vida y, en conjunto, se refuerzan mutuamente para mejorar todos los aspectos.'
+
+  // Actualiza el componente en la caja de detalle de la sección proyectos, llama a la función para manejar la iluminación
+  const manejarClick = (componente, index) => {
+    setContenidoRecuadro(componente)
+    setCajaIluminada(index)
+  }
+
+  return (
+    <section className='py-0 px-[5%]'>
+      <ul className='flex flex-col gap-[10vh] w-full h-auto wrap justify-center items-center'>
+        <li className='flex w-full h-auto flex-wrap justify-center items-center'>
+          <h1> {tituloDeSeccionProyectos}</h1>
+        </li>
+        <li className='flex w-full h-auto flex-wrap justify-center items-center'>
+          <p> {descripcionProyectos} </p>
+        </li>
+        <li className='flex w-12 h-auto flex-wrap justify-center items-center'>
+          <img src={bars} className='invert-[95%] sepia-[42%] saturate-[5365%] hue-rotate-15 brightness-[106] contrast-[107%]' alt='barras' />
+        </li>
+        <li className='flex w-full h-auto flex-wrap justify-center items-center'>
+          <ul className='flex flex-row justify-between w-[90%]'>
+            <CreateBoxes cajaIluminada={cajaIluminada} manejarClick={manejarClick} />
+          </ul>
+        </li>
+        <li className='flex w-full h-auto flex-wrap justify-center items-center'>
+          <div className='w-[90%] h-[50vh] rounded-md shadow-[5px_5px_12px_0_rgba(255,255,255,0.1)] bg-[rgb(25,27,33)] mx-0 my-[10vh]'>
+            {contenidoRecuadro}
+          </div>
+        </li>
+      </ul>
+    </section>
+  )
 };
 
 const CreateBoxes = (props) => {
-    return projects.map( (p, key) => {                      
-        return (
-            <li key={key} className={`proyectos--box ${props.cajaIluminada === key ? "sombreado" : "" }`} onClick={ () => props.manejarClick(<ContenidoDetalleProyecto titulo={p.titulo} descripccion={p.description} imagen={urlImagenes[p.id]} />, key) }> 
-                { contenidoCajasSeccionProyectos(urlImagenes[p.id], p.titulo) } 
-            </li> 
-        )
-    })
-};
+  return projects.map((p, key) => {
+    return (
+      <li key={key} className={`w-[15vw] h-[15vw] rounded-md bg-[rgb(25,27,33)] flex-col items-center justify-evenly flex cursor-pointer ${props.cajaIluminada === key ? 'shadow-[5px_5px_12px_0_rgba(255,255,255,1)]' : 'shadow-[5px_5px_12px_0_rgba(255,255,255,0.01)]'}`} onClick={() => props.manejarClick(<ContenidoDetalleProyecto titulo={p.titulo} descripccion={p.description} imagen={urlImagenes[p.id]} />, key)}>
+        {contenidoCajasSeccionProyectos(urlImagenes[p.id], p.titulo)}
+      </li>
+    )
+  })
+}
 
-//Proposito: dada un imagen, un titulo y una descripcion crea el contenido de la caja de detalle de la seccion proyectos.
+// Proposito: dada un imagen, un titulo y una descripcion crea el contenido de la caja de detalle de la seccion proyectos.
 
 const ContenidoDetalleProyecto = (props) => {
-    return(
-        <section className='DetalleProyecto'>
-            <div className='DetalleProyecto--derecha'>
-                <div className='DetalleProyecto--derecha--contenedorDeImagen'>
-                    <img src={props.imagen} className='DetalleProyecto--Icon' alt="proyecto-icono" />
-                </div>
-            </div>
-            <div className='DetalleProyecto--izquierda'>
-                <div className='DetalleProyecto--up'> <h6>{props.titulo}</h6> </div>
-                <div className='DetalleProyecto--down'> <p>{props.descripccion}</p> </div>
-            </div>
-        </section>
-    );
-};
+  return (
+    <section className='w-full h-full flex flex-row wrap justify-evenly'>
+      <div className='w-auto h-full flex justify-center items-center py-0 px-[5vw]'>
+        <div className='w-auto h-[30%]'>
+          <img src={props.imagen} className='invert-[95%] sepia-[42%] saturate-[5365%] hue-rotate-15 brightness-[106] contrast-[107%]' alt='proyecto-icono' />
+        </div>
+      </div>
+      <div className='h-full w-[65%] flex flex-wrap content-center gap-[2vh]'>
+        <div className='w-full h-auto'> <h6>{props.titulo}</h6> </div>
+        <div className='w-full h-auto'> <p>{props.descripccion}</p> </div>
+      </div>
+    </section>
+  )
+}
 
-//Proposito: dada un titulo e imagen crea el contenido de una caja de la seccion proyectos.
+// Proposito: dada un titulo e imagen crea el contenido de una caja de la seccion proyectos.
 
 const contenidoCajasSeccionProyectos = (logo, titular) => {
-    return (
-        <section className='proyectos--box'>
-            <div className='proyectos--box--contenedorDeImagen'><img className='proyectos--box--icon' src={logo} alt="proyecto-icono" /></div>
-            <div className='proyectos--box--titulo'><p>{titular}</p></div>
-        </section>
-    );
-};
+  return (
+    <section className='w-[15vw] h-[15vw] rounded-md bg-[rgb(25,27,33)] flex-col items-center justify-evenly flex cursor-pointer'>
+      <div className='w-1/4 h-1/4'><img className='invert-[95%] sepia-[42%] saturate-[5365%] hue-rotate-15 brightness-[106] contrast-[107%]' src={logo} alt='proyecto-icono' /></div>
+      <div className='w-auto h-auto'><p>{titular}</p></div>
+    </section>
+  )
+}

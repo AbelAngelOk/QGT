@@ -1,4 +1,3 @@
-import './headerPopUp.css'
 import dataBoxes from './gestionPopUp.json'
 
 export const GestionPopUp = () => {
