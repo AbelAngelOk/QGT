@@ -22,7 +22,7 @@ export const Promises = () => {
 
   return (
     <div>
-      <div className='compromiso__total-container'>
+      <div id='compromiso__total-container'>
         <div id='banner'>
           <Banner json={bannerData} />
         </div>

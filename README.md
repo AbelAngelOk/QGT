@@ -54,7 +54,17 @@ En lugar de utilizar los comandos tambien se puede optar por ejecutar el archivo
 **
 ```
 
+## Inicializacion
 
+ejecutar el proyecto ingresar en la terminal: 
+```
+npm run dev
+```
+
+para configurar las ejecuciones:
+```
+package.json
+```
 
 ## Historial de comentarios importantes
 

@@ -63,14 +63,14 @@ const CreateBoxes = (props) => {
 
 const ContenidoDetalleProyecto = (props) => {
   return (
-    <section className='w-full h-full flex flex-row wrap justify-evenly'>
-      <div className='w-auto h-full flex justify-center items-center py-0 px-[5vw]'>
-        <div className='w-auto h-[30%]'>
-          <img src={props.imagen} className='invert-[95%] sepia-[42%] saturate-[5365%] hue-rotate-15 brightness-[106] contrast-[107%]' alt='proyecto-icono' />
+    <section id="DetalleProyecto" className='w-full h-full flex flex-row wrap justify-evenly'>
+      <div id='DetalleProyecto--derecha' className='w-auto h-full flex justify-center items-center py-0 px-[5vw]'>
+        <div id='DetalleProyecto--derecha--contenedorDeImagen' className='w-auto h-[30%]'>
+          <img id='DetalleProyecto--Icon' src={props.imagen} className='invert-[95%] sepia-[42%] saturate-[5365%] hue-rotate-15 brightness-[106] contrast-[107%]' alt='proyecto-icono' />
         </div>
       </div>
-      <div className='h-full w-[65%] flex flex-wrap content-center gap-[2vh]'>
-        <div className='w-full h-auto'> <h6>{props.titulo}</h6> </div>
+      <div id='DetalleProyecto--izquierda' className='h-full w-[65%] flex flex-wrap content-center gap-[2vh]'>
+        <div id='DetalleProyecto--up' className='w-full h-auto'> <h6>{props.titulo}</h6> </div>
         <div className='w-full h-auto'> <p>{props.descripccion}</p> </div>
       </div>
     </section>
@@ -81,9 +81,9 @@ const ContenidoDetalleProyecto = (props) => {
 
 const contenidoCajasSeccionProyectos = (logo, titular) => {
   return (
-    <section className='w-[15vw] h-[15vw] rounded-md bg-[rgb(25,27,33)] flex-col items-center justify-evenly flex cursor-pointer'>
-      <div className='w-1/4 h-1/4'><img className='invert-[95%] sepia-[42%] saturate-[5365%] hue-rotate-15 brightness-[106] contrast-[107%]' src={logo} alt='proyecto-icono' /></div>
-      <div className='w-auto h-auto'><p>{titular}</p></div>
+    <section id='proyectos--box' className='w-[15vw] h-[15vw] rounded-md bg-[rgb(25,27,33)] flex-col items-center justify-evenly flex cursor-pointer'>
+      <div id='proyectos--box--contenedorDeImagen'  className='w-1/4 h-1/4'><img className='invert-[95%] sepia-[42%] saturate-[5365%] hue-rotate-15 brightness-[106] contrast-[107%]' src={logo} alt='proyecto-icono' /></div>
+      <div id='proyectos--box--titulo' className='w-auto h-auto'><p>{titular}</p></div>
     </section>
   )
 }
