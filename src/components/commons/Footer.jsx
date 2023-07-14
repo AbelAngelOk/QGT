@@ -1,4 +1,3 @@
-import './footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import footerData from './footerData.json'
@@ -9,17 +8,17 @@ export const Footer = () => {
   const renderIcons = () => {
     return icons.map((icon, key) => (
       <a key={key} rel='noreferrer' target='_blank' href={`https://www.${icon.url}.com/`}>
-        <FontAwesomeIcon className='footer__icon' icon={icon.svg} />
+        <FontAwesomeIcon id='footer__icon' className='text-4xl' icon={icon.svg} />
       </a>
     ))
   }
 
   return (
-    <div className='footer__container '>
-      <div className='footer__upper-container'>
-        <div className='footer__upper-left' />
-        <div className='footer__upper-middle'>{renderIcons()}</div>
-        <div className='footer__upper-right' />
+    <div id='footer__container' className='flex flex-col p-6 h-72 bg-[#2e3f51]'>
+      <div id='footer__upper-container' className='flex justify-around mt-3'>
+        <div id='footer__upper-left' className='flex justify-around mt-3'/>
+        <div id='footer__upper-middle' className='border-cyan-100 w-1/2 flex justify-between'>{renderIcons()}</div>
+        <div id='footer__upper-right' className='border-cyan-100'/>
       </div>
       <div className='self-center mt-5 text-center'>
         <h3 className='tracking-[3px] text-[1.8rem] text-[#cdd9e8]'>{footerData.title}</h3>

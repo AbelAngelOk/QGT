@@ -1,5 +1,3 @@
-import './projects.css';
-import '../styles.css';
 import bars from '../../assets/img/bars.svg';
 import {useState} from 'react';
 
@@ -26,24 +24,24 @@ export function Projects () {
     };
     
     return (
-        <section className='proyectos'>
-            <ul className='proyectos--inner'>
-                <li className='proyectos--title'>
-                    <h1> { titulo_de_seccion_proyectos }</h1>
+        <section id='proyectos' className='flex w-full h-auto flex-wrap justify-center items-center py-5 bg-slate-200 dark:bg-slate-600'>
+            <ul id='proyectos--inner' className='flex w-full h-auto flex-col items-center gap-10'>
+                <li id='proyectos--title' className='flex w-10/12 h-auto flex-wrap justify-center items-center'>
+                    <h1 className='text-cyan-950 dark:text-cyan-50 m-0 mb-4 text-6xl leading-none tracking-tight'> { titulo_de_seccion_proyectos }</h1>
                 </li>
-                <li className='proyectos--description'>
-                    <p> { descripcion_de_proyectos } </p>
+                <li id='proyectos--description' className='flex w-10/12 h-auto flex-wrap justify-center items-center'>
+                    <p className='text-cyan-950 dark:text-cyan-50'> { descripcion_de_proyectos } </p>
                 </li>
-                <li className='proyectos--tab'>
-                    <img src={bars} className='proyectos--tab--icon' alt="barras"/>
+                <li id='proyectos--tab' className='w-[50px]'>
+                    <img src={bars} id='proyectos--tab--icon' className='' alt="barras"/>
                 </li>
-                <li className='proyectos--containerBox'>
-                    <ul className='proyectos--containerBox__ul'>
+                <li id='proyectos--containerBox' className='flex w-full h-auto flex-wrap justify-center items-center'>
+                    <ul id='proyectos--containerBox__ul' className='flex flex-row justify-between w-11/12'>
                         <CreateBoxes cajaIluminada={cajaIluminada}  manejarClick={manejarClick}/>
                     </ul>
                 </li>
-                <li className='proyectos--detalle'>
-                    <div className='proyectos--TablaDetalle'>
+                <li id='proyectos--detalle' className='flex w-full h-auto flex-wrap justify-center items-center'>
+                    <div id='proyectos--TablaDetalle' className='w-11/12 h-[50vh] rounded-lg shadow-lg bg-slate-400 dark:bg-slate-800 my-4'>
                         {contenidoRecuadro}            
                     </div>
                 </li>
@@ -55,7 +53,7 @@ export function Projects () {
 const CreateBoxes = (props) => {
     return projects.map( (p, key) => {                      
         return (
-            <li key={key} className={`proyectos--box ${props.cajaIluminada === key ? "sombreado" : "" }`} onClick={ () => props.manejarClick(<ContenidoDetalleProyecto titulo={p.titulo} descripccion={p.description} imagen={urlImagenes[p.id]} />, key) }> 
+            <li key={key} id='proyectos--box' className={`w-[15vw] h-[15vw] rounded-lg shadow-lg shadow-slate-950 dark:shadow-slate-50 bg-slate-400 dark:bg-slate-800 flex-col items-center justify-evenly flex cursor-pointer  ${props.cajaIluminada === key ? "shadow-lg shadow-slate-50 dark:shadow-slate-950" : "" }`} onClick={ () => props.manejarClick(<ContenidoDetalleProyecto titulo={p.titulo} descripccion={p.description} imagen={urlImagenes[p.id]} />, key) }> 
                 { contenidoCajasSeccionProyectos(urlImagenes[p.id], p.titulo) } 
             </li> 
         )
@@ -66,15 +64,19 @@ const CreateBoxes = (props) => {
 
 const ContenidoDetalleProyecto = (props) => {
     return(
-        <section className='DetalleProyecto'>
-            <div className='DetalleProyecto--derecha'>
-                <div className='DetalleProyecto--derecha--contenedorDeImagen'>
-                    <img src={props.imagen} className='DetalleProyecto--Icon' alt="proyecto-icono" />
+        <section id="DetalleProyecto" className='w-full h-full flex flex-row flex-wrap justify-evenly'>
+            <div id='DetalleProyecto--derecha' className='w-auto h-full flex justify-center items-center'>
+                <div id='DetalleProyecto--derecha--contenedorDeImagen' className='w-auto h-1/3'>
+                    <img src={props.imagen} id='DetalleProyecto--Icon' className='' alt="proyecto-icono" />
                 </div>
             </div>
-            <div className='DetalleProyecto--izquierda'>
-                <div className='DetalleProyecto--up'> <h6>{props.titulo}</h6> </div>
-                <div className='DetalleProyecto--down'> <p>{props.descripccion}</p> </div>
+            <div id='DetalleProyecto--izquierda' className='h-full w-4/6 flex flex-wrap content-center gap-1'>
+                <div id='DetalleProyecto--up' className='w-full h-auto'> 
+                    <h6 className='text-cyan-950 dark:text-cyan-50'>{props.titulo}</h6> 
+                </div>
+                <div id='DetalleProyecto--down' className='w-full h-auto'> 
+                    <p className='text-cyan-950 dark:text-cyan-50'>{props.descripccion}</p> 
+                </div>
             </div>
         </section>
     );
@@ -84,9 +86,11 @@ const ContenidoDetalleProyecto = (props) => {
 
 const contenidoCajasSeccionProyectos = (logo, titular) => {
     return (
-        <section className='proyectos--box'>
-            <div className='proyectos--box--contenedorDeImagen'><img className='proyectos--box--icon' src={logo} alt="proyecto-icono" /></div>
-            <div className='proyectos--box--titulo'><p>{titular}</p></div>
+        <section id='proyectos--box' className='w-[15vw] h-[15vw] rounded-lg shadow-lg shadow-slate-950 dark:shadow-slate-50 bg-slate-400 dark:bg-slate-800 flex-col items-center justify-evenly flex cursor-pointer'>
+            <div id='proyectos--box--contenedorDeImagen' className='w-1/4 h-1/4'><img id='proyectos--box--icon' className='' src={logo} alt="proyecto-icono" /></div>
+            <div id='proyectos--box--titulo' className='w-auto h-auto'>
+                <p className='text-cyan-950 dark:text-cyan-50'>{titular}</p>
+            </div>
         </section>
     );
 };

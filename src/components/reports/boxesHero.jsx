@@ -1,8 +1,6 @@
-import './box.css'
-
 const boxesHero = () => {
   return (
-    <section className='reports--threeBoxesSection'>
+    <section id='reports--threeBoxesSection' className='w-full h-96 flex justify-around items-center flex-wrap bg-slate-200 dark:bg-slate-700 pt-16'>
       <Box />
       <Box />
       <Box />
@@ -14,17 +12,17 @@ export default boxesHero
 
 function Box () {
   return (
-    <ul className='reports--box'>
-      <li className='reports--box--horizontalUp'>
-        <p> Solicitudes de licencias </p>
-        <div className='reports--box--eyeLogoContainer'><img alt='' /></div>
+    <ul id='reports--box' className='w-80 h-52 flex flex-wrap py-1 px-3 shadow-lg rounded-lg border bg-slate-300 dark:bg-slate-800'>
+      <li id='reports--box--horizontalUp' className='w-full h-1/3 justify-evenly items-center flex flex-wrap'>
+        <p className='text-cyan-950 dark:text-cyan-50'> Solicitudes de licencias </p>
+        <div id='reports--box--eyeLogoContainer' className=''><img alt='' /></div>
       </li>
-      <li className='reports--box--horizontalDown'>
-        <div className='reports--box--Down--left'>
-          <p>16</p>
-          <p>Pendientes</p>
+      <li id='reports--box--horizontalDown' className='w-full h-2/3 flex flex-wrap items-center justify-evenly'>
+        <div id='reports--box--Down--left' className='w-1/2 h-full flex flex-wrap flex-row'>
+          <p className='text-cyan-950 dark:text-cyan-50'>16</p>
+          <p className='text-cyan-950 dark:text-cyan-50'>Pendientes</p>
         </div>
-        <div className='reports--box--Down--right'>
+        <div id='reports--box--Down--right' className='w-1/2 h-full flex flex-wrap flex-row'>
           <img alt='' />
         </div>
       </li>
