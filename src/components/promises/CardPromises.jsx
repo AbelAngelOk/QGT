@@ -1,31 +1,19 @@
-import p from './promisesCards.json';
-import fcp from './FirstCardPromises';
-import scp from './SecondCardPromises';
+// import p from './promisesCards.json'
+// import { FirstCardPromises } from './FirstCardPromises'
+// import { SecondCardPromises } from './SecondCardPromises'
 
+// export function CardPromises () {
+//   const renderPromises = () => {
+//     return (
+//       p.map(e => {
+//         if (e.idLogo === 0 || e.idLogo % 2 === 0) {
+//           return <FirstCardPromises data={p} key={e.idLogo} />
+//         } else {
+//           return <SecondCardPromises data={p} key={e.idLogo} />
+//         }
+//       })
+//     )
+//   }
 
-const CardPromises = () => {
-    return RenderPromises
-}
-
-const RenderPromises = () => {
-    return (
-        p.map( e => { 
-            if ( esIgualACero(e.idLogo) || esPar(e.idLogo) ) {
-                return fcp(e)
-            } else {
-                return scp(e)
-            }          
-        })
-    )
-}
-
-const esIgualACero = (e) => {
-    let r = e = 0;
-    return (r)
-}
-
-const esPar = (e) => {
-    return ( ( e % 2 ) == 0 )
-}
-
-export default CardPromises;
+//   return renderPromises
+// }

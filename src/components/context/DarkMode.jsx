@@ -29,13 +29,13 @@ export function DarkMode () {
 
   return (
     <>
-      <button onClick={handleDarkMode} className='justify-self-end'>
+      <button onClick={handleDarkMode} className='absolute right-0 lg:static ml-auto lg:ml-0 mr-5 lg:mr-0'>
         {darkMode
           ? (
-            <FontAwesomeIcon icon={faMoon} className='text-3xl text-[#ffffff]' />
+            <FontAwesomeIcon icon={faMoon} className='text-4xl lg:text-3xl text-[#ffffff]' />
             )
           : (
-            <FontAwesomeIcon icon={faSun} className='text-3xl text-[#484c52]' />
+            <FontAwesomeIcon icon={faSun} className='text-4xl lg:text-3xl text-[#484c52]' />
             )}
       </button>
     </>
