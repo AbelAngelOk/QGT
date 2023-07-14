@@ -14,8 +14,8 @@ const tituloSeccionEquipos = 'Equipo Electoral'
 
 export function Team () {
   return (
-    <section className='w-full h-auto flex flex-wrap justify-center pb-[5%] bg-[rgb(25,27,33)] border-y-[#e5e7ea26]  '>
-      <div className='w-full h-auto flex justify-center my-8 mx-0 '>
+    <section className='w-full lg:min-h-[800px] h-auto flex flex-wrap justify-center pb-[5%] bg-[rgb(25,27,33)] border-y-[#e5e7ea26]  '>
+      <div className='w-full h-fit flex justify-center my-8 mx-0 '>
         <h2 className='py-5 text-4xl md:text-5xl'> {tituloSeccionEquipos} </h2>
       </div>
       <ul className='w-full h-auto flex justify-evenly flex-wrap gap-6'>

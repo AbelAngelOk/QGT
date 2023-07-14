@@ -2,7 +2,7 @@ import h from './hero.json'
 
 export function Hero () {
   return (
-    <div className='w-full h-auto sm:h-[700px] flex flex-wrap'>
+    <div className='w-full h-auto sm:h-[700px] lg:h-[800px] flex flex-wrap'>
       <div className='py-[100px] w-full h-auto bg-[#f7f8f9] dark:bg-[#282c34] text-[#41454b] dark:text-[#ffffff] flex justify-center items-center flex-wrap'>
         <ul className='flex justify-center items-center flex-wrap w-4/5 gap-[30px]'>
           <li className='capitalize text-3xl  md:text-[4vw] lg:text-5xl  leading-[1.375] text-center font-semibold'> {h.title} </li>
