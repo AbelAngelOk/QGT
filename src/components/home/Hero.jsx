@@ -1,5 +1,5 @@
-import './hero.css';
-import h from './hero.json';
+import h from './HeroConst.json';
+
 export function Hero() {
   return (
     <div className='w-full h-[700px] flex flex-wrap'>
