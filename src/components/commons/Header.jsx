@@ -64,7 +64,7 @@ export function Header () {
         </Link>
       </div>
       <nav className='hidden h-full lg:block'>
-        <ul className='h-full flex list-none justify-around items-center mr-16 gap-12   '>
+        <ul className='h-full flex list-none justify-around items-center mr-16 gap-12 relative bottom-3'>
           <li className='flex h-1/2 cursor-pointer' onMouseOver={handleGestionPopUpMouseOver} onMouseLeave={handleGestionPopUpMouseLeave}>
             <p className='border-none text-[#484c52] dark:text-[#ffffff] text-xl tracking-[2px] font-bold relative cursor-pointer select-none h-6 top-[10px]'> {data.sectionText_1} </p>
             <div className='relative text-xl cursor-pointer top-3 text-[#484c52] dark:text-[#ffffff] left-1'>
