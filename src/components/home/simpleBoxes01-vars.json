@@ -2,26 +2,31 @@
     {
         "nombre":"Jose Luis Amaturo",
         "rol":"Intendente",
+        "img":"../../assets/img/ammaturo_v2.png",
         "id":0
     },
     {
         "nombre":"Estefania Alfasetti",
         "rol":"Consejal",
+        "img":"../../assets/img/alfasetti.png",
         "id":1
     },
     {
         "nombre":"Alan Benitez",
         "rol":"Ministro de seguridad",
+        "img":"https://arbusta.net/wp-content/uploads/2023/01/Paula-Cardenau-300x300.png",
         "id":2
     },
     {
         "nombre":"Alan Cejas",
         "rol":"Ministro de administracion",
+        "img":"https://arbusta.net/wp-content/uploads/2023/02/Beatriz-Ponce-de-Leon-300x300.png",
         "id":3
     },
     {
         "nombre":"Mateo Cao",
         "rol":"Ministro de economia",
+        "img":"https://arbusta.net/wp-content/uploads/2023/02/Karen-Reales-300x300.png",
         "id":4
     }
 ]
