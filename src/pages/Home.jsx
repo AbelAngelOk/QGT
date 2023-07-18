@@ -1,5 +1,5 @@
 import { Hero } from '../components/home/Hero.jsx'
-import { SimpleBoxes01 } from '../components/home/SimpleBoxes01.jsx'
+import { SimpleBoxes01 as Team } from '../components/home/SimpleBoxes01.jsx'
 import { Projects } from '../components/home/Projects.jsx'
 import { Secretarias } from '../components/home/Secretarias.jsx'
 import { MisionVisionValores } from '../components/home/MisionVisionValores.jsx'
@@ -18,7 +18,7 @@ export const Home = () => {
   return (
     <div className='bg-[#eeeeee] dark:bg-[#282c34]'>
       <Hero />
-      <SimpleBoxes01 /> 
+      <Team /> 
       <MisionVisionValores />
       <Secretarias />
       <Projects />

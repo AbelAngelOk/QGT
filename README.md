@@ -31,7 +31,7 @@ Cada componente esta compuesto de uno o varios archivos **.jsx** y **.json** los
 - **vars** hace referencia a los elementos variables como los datos de un miembro o una publicacion. 
 - **.jsx** contienen la estructura en donde se tratan los datos.
 
-Los componentes dependen de las librerias anteriormente mencionadas. Y la paleta de colores de los componentes dependen del archivo **tailwind.config.js**
+Los componentes dependen de las librerias anteriormente mencionadas. Y la paleta de colores y las animaciones dependen del archivo **tailwind.config.js**
 
 ### Tecnologias utilizadas
 - React con Vite

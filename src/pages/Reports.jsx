@@ -1,5 +1,5 @@
 import BoxesHero from '../components/reports/boxesHero'
-import ListReports from '../components/reports/listReports'
+import { table01 as ListReports } from '../components/reports/table01'
 import { Footer } from '../components/commons/Footer'
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
