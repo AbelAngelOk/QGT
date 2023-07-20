@@ -3,8 +3,8 @@ import { SimpleBoxes01 as Team } from '../components/home/SimpleBoxes01.jsx'
 import { Projects } from '../components/home/Projects.jsx'
 import { Secretarias } from '../components/home/Secretarias.jsx'
 import { MisionVisionValores } from '../components/home/MisionVisionValores.jsx'
-import { Footer } from '../components/commons/Footer'
-
+import { Footer } from '../components/commons/Footer.jsx'
+import { Contact01 } from '../components/home/contact01.jsx'
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 
@@ -16,13 +16,14 @@ export const Home = () => {
   }, [location])
 
   return (
-    <div className='bg-[#eeeeee] dark:bg-[#282c34]'>
+    <div className='bg-[#eeeeee] dark:bg-[#282c34]'>    
       <Hero />
       <Team /> 
       <MisionVisionValores />
       <Secretarias />
       <Projects />
-      <Footer />
+      <Contact01/>
+      <Footer /> 
     </div>
   )
 }
