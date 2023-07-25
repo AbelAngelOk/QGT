@@ -29,7 +29,7 @@ export function DarkMode () {
 
   return (
     <>
-      <button onClick={handleDarkMode} className='absolute right-0 lg:static ml-auto lg:ml-0 mr-5 lg:mr-0'>
+      <button id="buttonDarkOrLightMode"onClick={handleDarkMode} className='absolute right-0 lg:static ml-auto lg:ml-0 mr-5 lg:mr-0'>
         {darkMode
           ? (
             <FontAwesomeIcon icon={faMoon} className='text-4xl lg:text-3xl text-[#ffffff]' />

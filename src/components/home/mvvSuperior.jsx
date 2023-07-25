@@ -2,9 +2,9 @@ import data from './mvvSuperior.json'
 
 export const Superior = () => {
   return (
-    <div className='col-span-3 bg-[#474747] flex items-center justify-between shadow-[0_8px_6px_-2px_black]'>
-      <div className='flex items-center justify-center w-[45%] border-r-2 h-3/5'>
-        <h2 className='text-[2.5vw] p-0'>{data.title}</h2>
+    <div className='col-span-3 flex items-center justify-between shadow-[0_8px_6px_-2px_black]'>
+      <div className='text-center w-[45%] border-r-2 h-3/5'>
+        <h2 className='text-[1.2vw] p-0 mt-11'>{data.title}</h2>
       </div>
       <div className='w-1/2 p-3'>
         <p className='text-[1vw] mb-3'>{data.p1}</p>

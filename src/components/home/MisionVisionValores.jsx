@@ -1,6 +1,5 @@
 import data from './misionvisionvalores.json'
-
-import { Superior, Contenedor } from './ContentMisionVisionValores'
+import { Superior, Contenedor } from './mvvSuperior'
 
 export const MisionVisionValores = () => {
   return (

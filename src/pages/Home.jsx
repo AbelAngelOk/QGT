@@ -1,12 +1,13 @@
 import { Hero } from '../components/home/Hero.jsx'
-import { Team } from '../components/home/Team.jsx'
+import { SimpleBoxes01 as Team } from '../components/home/SimpleBoxes01.jsx'
 import { Projects } from '../components/home/Projects.jsx'
-import { Footer } from '../components/commons/Footer'
 import { Secretarias } from '../components/home/Secretarias.jsx'
-// import { Candidato } from '../components/home/CandidatoSection.jsx'
+import { Service } from '../components/home/Service.jsx'
+import { MisionVisionValores } from '../components/home/MisionVisionValores.jsx'
+import { Footer } from '../components/commons/Footer.jsx'
+import { Contact01 } from '../components/home/contact01.jsx'
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import { MisionVisionValores } from '../components/home/MisionVisionValores.jsx'
 
 export const Home = () => {
   const location = useLocation()
@@ -16,14 +17,15 @@ export const Home = () => {
   }, [location])
 
   return (
-    <div className='bg-[#eeeeee] dark:bg-[#282c34]'>
+    <div className='bg-[#eeeeee] dark:bg-[#282c34]'>    
       <Hero />
-      {/* <Candidato /> */}
-      <Team />
+      <Team /> 
+      <Service />
       <MisionVisionValores />
       <Secretarias />
       <Projects />
-      <Footer />
+      <Contact01/>
+      <Footer /> 
     </div>
   )
 }

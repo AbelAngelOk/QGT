@@ -2,5 +2,6 @@
     "titleColumn01":"Año",
     "titleColumn02":"Trimestre",
     "titleColumn03":"Nombre",
-    "titleColumn04":"Informe"
+    "titleColumn04":"Informe",
+    "downloadButton":"descargar"
 }

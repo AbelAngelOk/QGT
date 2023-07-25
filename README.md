@@ -20,9 +20,18 @@ Al abrir cmd desde la carpeta o dentro del proyecto
 3. ``` npm install -D tailwindcss postcss autoprefixer ``` para instalar paquete de estilos
 4. ``` npx tailwindcss init -p ``` para iniciar archivos configurables del paquete de estilos
 
-En lugar de utilizar los comandos tambien se puede optar por ejecutar el archivo **install.bat**
+En lugar de utilizar los comandos tambien se puede optar por ejecutar los archivos **.bat** en el orden numero.
 
 ## Sobre el proyecto
+
+## Sobre componentes
+
+Cada componente esta compuesto de uno o varios archivos **.jsx** y **.json** los archivos .jsons tienen el mismo nombre que el .jsx y se dividen en const y vars. 
+- **const** hace referencia a los datos en elementos fijos como por ejemplo el texto "ver mas" de un boton o un titulo. 
+- **vars** hace referencia a los elementos variables como los datos de un miembro o una publicacion. 
+- **.jsx** contienen la estructura en donde se tratan los datos.
+
+Los componentes dependen de las librerias anteriormente mencionadas. Y la paleta de colores y las animaciones dependen del archivo **tailwind.config.js**
 
 ### Tecnologias utilizadas
 - React con Vite
