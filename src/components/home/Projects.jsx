@@ -25,10 +25,10 @@ export function Projects () {
   return (
     <section className='py-0 px-[5%] dark:text-white mt-20'>
       <ul className='flex flex-col gap-10 lg:gap-[10vh] w-full h-auto wrap justify-center items-center'>
-        <li className='flex w-full h-auto flex-wrap text-5xl justify-center items-center'>
-          <h1> {tituloDeSeccionProyectos}</h1>
+        <li className='flex w-full h-auto flex-wrap text-5xl justify-center items-center text-center'>
+          <h3> {tituloDeSeccionProyectos}</h3>
         </li>
-        <li className='flex w-3/4 h-auto flex-wrap text-lg justify-center items-center'>
+        <li className='flex w-11/12 md:w-3/4 h-auto flex-wrap text-lg justify-center items-center'>
           <p> {descripcionProyectos} </p>
         </li>
         <li className='flex w-12 h-auto flex-wrap justify-center items-center'>
@@ -63,7 +63,7 @@ const CreateBoxes = (props) => {
 
 const ContenidoDetalleProyecto = (props) => {
   return (
-    <section id='DetalleProyecto' className='w-full h-full flex flex-row flex-wrap sm:flex-nowrap gap-4 sm:gap-2 justify-evenly'>
+    <section id='DetalleProyecto' className='w-full h-full flex flex-row flex-wrap sm:flex-nowrap gap-12 sm:gap-2 justify-evenly'>
       <div id='DetalleProyecto--derecha' className='w-auto flex justify-center items-center py-0 px-[5vw]'>
         <div id='DetalleProyecto--derecha--contenedorDeImagen' className='w-auto h-auto'>
           <img id='DetalleProyecto--Icon' src={props.imagen} className='relative w-[130px] lg:w-[180px] text-white' alt='proyecto-icono' />
