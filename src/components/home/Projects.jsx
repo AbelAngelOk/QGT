@@ -23,24 +23,24 @@ export function Projects () {
   }
 
   return (
-    <section className='py-0 px-[5%]'>
-      <ul className='flex flex-col gap-[10vh] w-full h-auto wrap justify-center items-center'>
-        <li className='flex w-full h-auto flex-wrap justify-center items-center'>
+    <section className='py-0 px-[5%] dark:text-white mt-20'>
+      <ul className='flex flex-col gap-10 lg:gap-[10vh] w-full h-auto wrap justify-center items-center'>
+        <li className='flex w-full h-auto flex-wrap text-5xl justify-center items-center'>
           <h1> {tituloDeSeccionProyectos}</h1>
         </li>
-        <li className='flex w-full h-auto flex-wrap justify-center items-center'>
+        <li className='flex w-3/4 h-auto flex-wrap text-lg justify-center items-center'>
           <p> {descripcionProyectos} </p>
         </li>
         <li className='flex w-12 h-auto flex-wrap justify-center items-center'>
           <img src={bars} className='invert-[95%] sepia-[42%] saturate-[5365%] hue-rotate-15 brightness-[106] contrast-[107%]' alt='barras' />
         </li>
         <li className='flex w-full h-auto flex-wrap justify-center items-center'>
-          <ul className='flex flex-row justify-between w-[90%]'>
+          <ul className='flex flex-row flex-wrap gap-2 justify-center w-full md:w-[95%]'>
             <CreateBoxes cajaIluminada={cajaIluminada} manejarClick={manejarClick} />
           </ul>
         </li>
         <li className='flex w-full h-auto flex-wrap justify-center items-center'>
-          <div className='w-[90%] h-[50vh] rounded-md shadow-[5px_5px_12px_0_rgba(255,255,255,0.1)] bg-[rgb(25,27,33)] mx-0 my-[10vh]'>
+          <div className='w-full md:w-[90%] px-2 min-h-[50vh] h-auto flex items-center py-5 md:py-0 rounded-md shadow-[5px_5px_12px_0_rgba(255,255,255,0.1)] bg-[rgb(25,27,33)] mx-0 my-[10vh]'>
             {contenidoRecuadro}
           </div>
         </li>
@@ -52,7 +52,7 @@ export function Projects () {
 const CreateBoxes = (props) => {
   return projects.map((p, key) => {
     return (
-      <li key={key} className={`w-[15vw] h-[15vw] rounded-md bg-[rgb(25,27,33)] flex-col items-center justify-evenly flex cursor-pointer ${props.cajaIluminada === key ? 'shadow-[5px_5px_12px_0_rgba(255,255,255,1)]' : 'shadow-[5px_5px_12px_0_rgba(255,255,255,0.01)]'}`} onClick={() => props.manejarClick(<ContenidoDetalleProyecto titulo={p.titulo} descripccion={p.description} imagen={urlImagenes[p.id]} />, key)}>
+      <li key={key} className={`lg:w-[15vw] lg:h-[15vw] rounded-md bg-[rgb(25,27,33)] flex-col items-center justify-evenly flex cursor-pointer ${props.cajaIluminada === key ? 'shadow-[5px_5px_12px_0_rgba(255,255,255,1)]' : 'shadow-[5px_5px_12px_0_rgba(255,255,255,0.01)]'}`} onClick={() => props.manejarClick(<ContenidoDetalleProyecto titulo={p.titulo} descripccion={p.description} imagen={urlImagenes[p.id]} />, key)}>
         {contenidoCajasSeccionProyectos(urlImagenes[p.id], p.titulo)}
       </li>
     )
@@ -63,15 +63,15 @@ const CreateBoxes = (props) => {
 
 const ContenidoDetalleProyecto = (props) => {
   return (
-    <section id="DetalleProyecto" className='w-full h-full flex flex-row wrap justify-evenly'>
-      <div id='DetalleProyecto--derecha' className='w-auto h-full flex justify-center items-center py-0 px-[5vw]'>
-        <div id='DetalleProyecto--derecha--contenedorDeImagen' className='w-auto h-[30%]'>
-          <img id='DetalleProyecto--Icon' src={props.imagen} className='invert-[95%] sepia-[42%] saturate-[5365%] hue-rotate-15 brightness-[106] contrast-[107%]' alt='proyecto-icono' />
+    <section id='DetalleProyecto' className='w-full h-full flex flex-row flex-wrap sm:flex-nowrap gap-4 sm:gap-2 justify-evenly'>
+      <div id='DetalleProyecto--derecha' className='w-auto flex justify-center items-center py-0 px-[5vw]'>
+        <div id='DetalleProyecto--derecha--contenedorDeImagen' className='w-auto h-auto'>
+          <img id='DetalleProyecto--Icon' src={props.imagen} className='relative w-[130px] lg:w-[180px] text-white' alt='proyecto-icono' />
         </div>
       </div>
-      <div id='DetalleProyecto--izquierda' className='h-full w-[65%] flex flex-wrap content-center gap-[2vh]'>
-        <div id='DetalleProyecto--up' className='w-full h-auto'> <h6>{props.titulo}</h6> </div>
-        <div className='w-full h-auto'> <p>{props.descripccion}</p> </div>
+      <div id='DetalleProyecto--izquierda' className='w-[95%] md:w-[65%] flex flex-wrap content-center gap-[2vh]'>
+        <div id='DetalleProyecto--up' className='w-full h-auto text-lg md:text-xl lg:text-3xl'> <h6>{props.titulo}</h6> </div>
+        <div className='w-full h-auto text-sm md:text-base lg:text-lg'> <p>{props.descripccion}</p> </div>
       </div>
     </section>
   )
@@ -81,8 +81,8 @@ const ContenidoDetalleProyecto = (props) => {
 
 const contenidoCajasSeccionProyectos = (logo, titular) => {
   return (
-    <section id='proyectos--box' className='w-[15vw] h-[15vw] rounded-md bg-[rgb(25,27,33)] flex-col items-center justify-evenly flex cursor-pointer'>
-      <div id='proyectos--box--contenedorDeImagen'  className='w-1/4 h-1/4'><img className='invert-[95%] sepia-[42%] saturate-[5365%] hue-rotate-15 brightness-[106] contrast-[107%]' src={logo} alt='proyecto-icono' /></div>
+    <section id='proyectos--box' className='w-[155px] h-[155px] lg:w-[15vw] lg:h-[15vw] rounded-md bg-[rgb(25,27,33)] flex-col items-center justify-evenly flex cursor-pointer'>
+      <div id='proyectos--box--contenedorDeImagen' className='w-1/4 h-1/4'><img className='invert-[95%] sepia-[42%] saturate-[5365%] hue-rotate-15 brightness-[106] contrast-[107%]' src={logo} alt='proyecto-icono' /></div>
       <div id='proyectos--box--titulo' className='w-auto h-auto'><p>{titular}</p></div>
     </section>
   )

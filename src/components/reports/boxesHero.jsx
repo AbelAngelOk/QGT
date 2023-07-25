@@ -1,6 +1,6 @@
 const boxesHero = () => {
   return (
-    <section id='reports--threeBoxesSection' className='w-full h-96 flex justify-around items-center flex-wrap bg-slate-200 dark:bg-slate-700 pt-16'>
+    <section id='reports--threeBoxesSection' className='w-full min-h-[420px]  flex flex-row gap-5 justify-around items-center flex-wrap bg-slate-200 dark:bg-slate-700 pt-5'>
       <Box />
       <Box />
       <Box />

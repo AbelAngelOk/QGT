@@ -2,7 +2,8 @@
     {
         "id":"0",
         "titulo":"Garantizar seguridad",
-        "description":"Proponemos implementar una política de 'Tolerancia Cero' en materia de seguridad. Mantener un patrullaje constante las 24 horas del día, los 7 días de la semana en todos los barrios. Que nuestros policías estén debidamente armados y cuentan con los permisos necesarios para actuar en caso de emergencia. Además, queremos incorporar pistolas TASER como herramienta para reducir eficazmente a los delincuentes."
+        "description":"Proponemos implementar una política de 'Tolerancia Cero' en materia de seguridad. Mantener un patrullaje constante las 24 horas del día, los 7 días de la semana en todos los barrios. Que nuestros policías estén debidamente armados y cuentan con los permisos necesarios para actuar en caso de emergencia. Además, queremos incorporar pistolas TASER como herramienta para reducir eficazmente a los delincuentes.",
+        "logo": "./src/assets/img/seguridad.svg"
     },
     {
         "id":"1",

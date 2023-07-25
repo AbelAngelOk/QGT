@@ -51,7 +51,7 @@ export function Header () {
   }, [menuMobile])
 
   return (
-    <header className='flex gap-5 lg:gap-0 lg:justify-around items-center h-auto bg-[#ffffff] dark:bg-[#282c34] shadow-md fixed  w-screen z-50 font-sans box-border'>
+    <header className='flex gap-5 lg:gap-0 lg:justify-around items-center   bg-[#ffffff] dark:bg-[#282c34] shadow-md fixed w-screen z-50 font-sans box-border'>
       <div className='lg:hidden ml-5 text-3xl mr-7'>
         <button className='text-white'>
           <FontAwesomeIcon onClick={handleMenuMobile} icon={faEllipsisVertical} />
@@ -60,7 +60,7 @@ export function Header () {
       {menuMobile && <MenuHeaderMobile setMenuMobile={setMenuMobile} menuMobile={menuMobile} gestionData={gestionData} promisesData={promisesData} />}
       <div className='h-full flex items-center justify-center'>
         <Link to='/#topComponent' className='no-underline'>
-          <h1 className='p-0 text-[#484c52] dark:text-[#ffffff]  cursor-pointer select-none mb-6 text-[2.5rem]'> {data.logoText} </h1>
+          <h1 className='p-0 text-[#484c52] dark:text-[#ffffff]  cursor-pointer select-none mb-6 text-[2.5rem] relative top-3'> {data.logoText} </h1>
         </Link>
       </div>
       <nav className='hidden h-full lg:block'>

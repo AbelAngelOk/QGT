@@ -14,10 +14,10 @@ export const Reports = () => {
   }, [location])
 
   return (
-    <div>
+    <>
       <BoxesHero />
       <ListReports />
       <Footer />
-    </div>
+    </>
   )
 }
