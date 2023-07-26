@@ -6,7 +6,7 @@ import cns from './simpleBoxes01-const.json'
 
 export function SimpleBoxes01 () {
   return (
-    <section id='simpleBoxes01' className='w-full h-auto flex flex-wrap justify-center pb-[5%] bg-palette-light-bg300 dark:bg-palette-light-txt800'>
+    <section id='simpleBoxes01' className='w-full h-auto flex flex-wrap justify-center pb-[5%] bg-palette-light-bg300 dark:bg-palette-light-txt800 min-h-[600px]'>
       <div id='simpleBoxes01-titleContainer' className='w-full h-auto flex justify-center my-8 mx-0'>
         <h2 id='simpleBoxes01-title' className='py-5 text-3xl md:text-5xl text-palette-light-txt800 dark:text-palette-light-bg100'> {cns.title} </h2>
       </div>

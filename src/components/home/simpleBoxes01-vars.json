@@ -2,13 +2,13 @@
     {
         "nombre":"Jose Luis Amaturo",
         "rol":"Intendente",
-        "img":"../../assets/img/ammaturo_v2.png",
+        "img":"https://arbusta.net/wp-content/uploads/2023/01/Paula-Cardenau-300x300.png",
         "id":0
     },
     {
         "nombre":"Estefania Alfasetti",
         "rol":"Consejal",
-        "img":"../../assets/img/alfasetti.png",
+        "img":"https://arbusta.net/wp-content/uploads/2023/01/Paula-Cardenau-300x300.png",
         "id":1
     },
     {

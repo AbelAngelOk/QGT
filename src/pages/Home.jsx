@@ -17,15 +17,15 @@ export const Home = () => {
   }, [location])
 
   return (
-    <div className='bg-[#eeeeee] dark:bg-[#282c34]'>    
+    <div className='bg-[#eeeeee] dark:bg-[#282c34]'>
       <Hero />
-      <Team /> 
+      <Team />
       <Service />
       <MisionVisionValores />
       <Secretarias />
       <Projects />
-      <Contact01/>
-      <Footer /> 
+      <Contact01 />
+      <Footer />
     </div>
   )
 }
