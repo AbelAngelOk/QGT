@@ -16,10 +16,14 @@ export function Service () {
 }
 
 function boxMap () {
-  return (boxes.map(e => box(e)))
+  return (boxes.map(e => {
+    return (
+      <Box key={e.id} e={e} />
+    )
+  }))
 }
 
-function box (e) {
+function Box ({ e }) {
   return (
     <div id={`service-box0${e.id}`} className='w-1/5 h-full min-w-[250px]  md:min-w-[180px] min-h-[340px] flex flex-col gap-12 items-center px-1 py-2'>
       <div id={`service-box0${e.id}-iconContainer`} className='w-[140px] min-h-[140px] h-2/6 flex items-center justify-center'>

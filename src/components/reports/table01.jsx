@@ -3,7 +3,7 @@ import lsReports from './table01-vars.json'
 
 export const table01 = () => {
   return (
-    <section id='table01' className='w-full h-auto flex text-xs py-16 sm:text-base flex-wrap items-center justify-center px-1bg-slate-200 dark:bg-slate-700'>
+    <section id='table01' className='w-full h-auto flex text-xs py-16 sm:text-base flex-wrap items-center justify-center px-2 bg-slate-200 dark:bg-slate-700'>
       <ul id='table01--table' className='md:w-9/12 flex flex-wrap rounded-lg shadow-lg bg-slate-300 dark:bg-slate-800 border'>
         <li id='table01--titleCols' className='p-1 w-full flex flex-wrap'>
           <ul id='table01--titleCols--inner' className='p-1 w-full flex flex-wrap rounded-lg items-center justify-evenly'>

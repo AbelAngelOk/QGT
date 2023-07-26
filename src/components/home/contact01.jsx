@@ -61,10 +61,12 @@ export function Contact01 () {
 }
 
 const renderIcons = () => {
-  return contact01vars.map(e => icon(e))
+  return contact01vars.map(e => (
+    <Icon key={e.name} e={e} />
+  ))
 }
 
-const icon = (e) => {
+const Icon = ({ e }) => {
   return (
     <li id={`contact01-${e.name}-container`} className='flex w-auto h-auto'>
       <a id='contact01-facebook-link' href={e.link} className='flex w-auto h-auto' rel='noreferrer' target='_blank'>

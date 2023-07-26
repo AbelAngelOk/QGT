@@ -18,7 +18,11 @@ export function SimpleBoxes01 () {
 }
 
 const BoxMap = () => {
-  return vrs.map(d => <Box data={d} />)
+  return vrs.map(d => {
+    return (
+      <Box key={d.id} data={d} />
+    )
+  })
 }
 
 const Box = ({ data }) => {
