@@ -11,22 +11,22 @@ export function MenuHeaderMobile (props) {
         <span onClick={toggleMenu} className='absolute right-3 top-2'>X</span>
       </div>
       <div className='p-6'>
-        <h3 onClick={toggleMenu} className='mb-5 text-3xl inline-block'>Gestion</h3>
-        <ul className='ml-2 flex flex-col gap-3 text-xl '>
+        <h3 onClick={toggleMenu} className='mb-5 text-2xl inline-block'>Gestion</h3>
+        <ul className='ml-2 flex flex-col gap-1'>
           {props.gestionData.map((data, key) => (
-            <li className='w-fit p-1' onClick={toggleMenu} key={key}>{data.boxTitle}</li>
+            <li className='w-fit p-1 text-base' onClick={toggleMenu} key={key}>{data.boxTitle}</li>
           ))}
         </ul>
       </div>
       <div className='p-4'>
-        <h3 className='mb-5 text-3xl w-fit'>
+        <h3 className='mb-5 text-2xl w-fit'>
           <Link onClick={toggleMenu} to='/Compromiso#banner'>
             Compromisos
           </Link>
         </h3>
-        <ul className='ml-2 flex flex-col gap-3 text-xl '>
+        <ul className='ml-2 flex flex-col gap-1'>
           {props.promisesData.map((data, key) => (
-            <li className='w-fit p-1' key={key}>
+            <li className='w-fit p-1 text-base' key={key}>
               <Link onClick={toggleMenu} to={data.href}>{data.boxTitle}</Link>
             </li>
           ))}

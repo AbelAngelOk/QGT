@@ -53,7 +53,7 @@ export function Header () {
   return (
     <header className='flex gap-5 lg:gap-0 lg:justify-around items-center   bg-[#ffffff] dark:bg-[#282c34] shadow-md fixed w-screen z-50 font-sans box-border'>
       <div className='lg:hidden ml-5 text-3xl mr-7'>
-        <button className='text-white'>
+        <button className='text-[#484c52] dark:text-[#ffffff]'>
           <FontAwesomeIcon onClick={handleMenuMobile} icon={faEllipsisVertical} />
         </button>
       </div>
