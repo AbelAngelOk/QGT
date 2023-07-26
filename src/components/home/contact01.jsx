@@ -47,7 +47,7 @@ export function Contact01 () {
               <div id='contact01-inputs-container' className='flex flex-wrap justify-around gap-4 w-full'>
                 <input id='contact01-name' type='text' className='w-2/5 border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm h-12 px-3 text-start focus:outline-none' placeholder='nombre' />
                 <input id='contact01-email' type='email' className='w-2/5 border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm h-12 px-3 text-start focus:outline-none' placeholder='email' />
-                <textarea id='contact01-messaje' type='text' className='w-full border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm h-32 p-3 text-start resize-none mt-5 focus:outline-none' placeholder='mensaje' />
+                <textarea id='contact01-messaje' type='text' className='w-4/5 lg:w-full border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm h-32 p-3 text-start resize-none mt-5 focus:outline-none' placeholder='mensaje' />
               </div>
               <div className='w-full'>
                 <button id='contact01-sendButton' className='py-1 px-3 w-1/2 h-12 border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm mt-5 text-white'> {data.BotonEnviar} </button>
