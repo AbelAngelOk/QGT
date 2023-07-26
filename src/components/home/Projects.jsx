@@ -25,10 +25,10 @@ export function Projects () {
   return (
     <section className='py-0 px-[5%] dark:text-white mt-20'>
       <ul className='flex flex-col gap-10 lg:gap-[10vh] w-full h-auto wrap justify-center items-center'>
-        <li className='flex w-full h-auto flex-wrap text-5xl justify-center items-center text-center'>
+        <li className='flex w-full h-auto flex-wrap text-3xl lg:text-5xl justify-center items-center text-center'>
           <h3> {tituloDeSeccionProyectos}</h3>
         </li>
-        <li className='flex w-11/12 md:w-3/4 h-auto flex-wrap text-lg justify-center items-center'>
+        <li className='flex w-11/12 md:w-3/4 h-auto flex-wrap text-base lg:text-lg justify-center items-center text-center'>
           <p> {descripcionProyectos} </p>
         </li>
         <li className='flex w-12 h-auto flex-wrap justify-center items-center'>
@@ -39,7 +39,7 @@ export function Projects () {
             <CreateBoxes cajaIluminada={cajaIluminada} manejarClick={manejarClick} />
           </ul>
         </li>
-        <li className='flex w-full h-auto flex-wrap justify-center items-center'>
+        <li id='contenido-recuadro' className='flex w-full h-auto flex-wrap justify-center items-center'>
           <div className='w-full md:w-[90%] px-2 min-h-[50vh] h-auto flex items-center py-5 md:py-0 rounded-md shadow-[5px_5px_12px_0_rgba(255,255,255,0.1)] bg-[rgb(25,27,33)] mx-0 my-[10vh]'>
             {contenidoRecuadro}
           </div>

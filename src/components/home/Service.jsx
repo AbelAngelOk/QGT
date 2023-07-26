@@ -6,7 +6,7 @@ export function Service () {
   return (
     <section id='service' className='w-full flex  flex-wrap justify-center items-center bg-palette-light-bg100 dark:bg-palette-light-txt700 min-h-[70vh] h-auto'>
       <div id='service-titleContainer' className='w-full flex justify-center items-center'>
-        <h1 className='text-palette-light-txt800 dark:text-palette-light-bg100 text-4xl md:text-6xl py-6 md:py-3 text-center'> {cnst.title} </h1>
+        <h1 className='text-palette-light-txt800 dark:text-palette-light-bg100 text-3xl md:text-5xl py-6 md:py-3 text-center'> {cnst.title} </h1>
       </div>
       <div id='service-boxes' className='w-full h-auto flex justify-evenly gap-5 md:gap-3 items-start flex-wrap py-3'>
         {boxMap()}
