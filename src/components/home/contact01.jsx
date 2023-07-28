@@ -5,13 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export function Contact01 () {
   return (
     <section id='contact01' className='w-full h-auto py-5 flex flex-wrap justify-center items-center p-2 bg-palette-light-bg200 dark:bg-palette-light-txt800'>
-      {/*
-            <iframe id="contact01-map"className="w-[45%] h-5/6" src={data.UrlLocation} style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            */}
-      <div id='contact01-left' className='sm:w-9/12 lg:w-1/2 lg:min-w-[495px] h-auto p-4 sm:p-6 lg:p-10'>
+      <iframe id='contact01-map' className='w-full sm:w-11/12 lg:w-[45%] lg:min-w-[495px] h-[450px] sm:h-[600px] xl:h-[700px] p-4 sm:p-6 lg:p-10' src={data.UrlLocation} allowFullScreen='' style={{ border: '0px' }} loading='lazy' referrerPolicy='no-referrer-when-downgrade' />
+
+      {/* <div id='contact01-left' className='sm:w-9/12 lg:w-1/2 lg:min-w-[495px] h-auto p-4 sm:p-6 lg:p-10'>
         <img src='../src/assets/img/map.png' className='w-full h-full rounded-lg object-scale-down' />
-      </div>
-      <div id='contact01-info' className='lg:w-1/2 lg:min-w-[495px] p-10 flex flex-col gap-16 items-center'>
+      </div> */}
+      <div id='contact01-info' className='lg:w-5/12 lg:min-w-[495px] p-10 flex flex-col gap-16 items-center'>
         <div id='contact01-up' className='w-full h-2/5 text-center'>
           <h4 id='contact01-up-title' className='text-2xl font-bold uppercase px-4 dark:text-palette-light-bg100 text-palette-light-txt800'> {data.TituloInfo} </h4>
           <div id='contact01-br01' className='flex flex-col w-full py-4 gap-1'>
