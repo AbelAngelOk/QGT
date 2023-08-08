@@ -6,6 +6,8 @@ import { Service } from '../components/home/Service.jsx'
 import { MisionVisionValores } from '../components/home/MisionVisionValores.jsx'
 import { Footer } from '../components/commons/Footer.jsx'
 import { Contact01 } from '../components/home/contact01.jsx'
+import { PlanSection } from '../components/home/PlanSection01.jsx'
+
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 
@@ -23,6 +25,7 @@ export const Home = () => {
       <Service />
       <MisionVisionValores />
       <Secretarias />
+      <PlanSection />
       <Projects />
       <Contact01 />
       <Footer />
