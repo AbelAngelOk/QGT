@@ -1,15 +1,41 @@
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser'
+
 import data from './contact01-const.json'
-import { contact01vars } from './contact01-vars'
+import contact01vars from './contact01-vars.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+library.add(faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube)
 
 export function Contact01 () {
+  const form = useRef()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const fields = form.current
+
+    if (fields.clientName.value.length >= 3 && fields.clientEmail.value.length >= 7 && fields.message.value.length >= 12) {
+      emailjs.sendForm('service_fqd9zyk', 'template_c87jhw6', form.current, 'Cr_hQD4l2qlowwA2t')
+        .then((result) => {
+          fields.reset()
+          console.log(result.text)
+          // eslint-disable-next-line no-undef
+          alert('Formulario enviado exitosamente')
+        }, (error) => {
+          console.log(error.text)
+          // eslint-disable-next-line no-undef
+          alert('Error al enviar el formulario')
+        })
+    } else {
+      // eslint-disable-next-line no-undef
+      alert('Completa el formulario correctamente')
+    }
+  }
+
   return (
     <section id='contact01' className='w-full h-auto py-5 flex flex-wrap justify-center items-center p-2 bg-palette-light-bg200 dark:bg-palette-light-txt800'>
       <iframe id='contact01-map' className='w-full sm:w-11/12 lg:w-[45%] lg:min-w-[495px] h-[450px] sm:h-[600px] xl:h-[700px] p-4 sm:p-6 lg:p-10' src={data.UrlLocation} allowFullScreen='' style={{ border: '0px' }} loading='lazy' referrerPolicy='no-referrer-when-downgrade' />
-
-      {/* <div id='contact01-left' className='sm:w-9/12 lg:w-1/2 lg:min-w-[495px] h-auto p-4 sm:p-6 lg:p-10'>
-        <img src='../src/assets/img/map.png' className='w-full h-full rounded-lg object-scale-down' />
-      </div> */}
       <div id='contact01-info' className='lg:w-5/12 lg:min-w-[495px] p-10 flex flex-col gap-16 items-center'>
         <div id='contact01-up' className='w-full h-2/5 text-center'>
           <h4 id='contact01-up-title' className='text-2xl font-bold uppercase px-4 dark:text-palette-light-bg100 text-palette-light-txt800'> {data.TituloInfo} </h4>
@@ -20,7 +46,9 @@ export function Contact01 () {
           <ul id='contact01-up-info' className='h-3/5 flex flex-col justify-evenly pb-5 gap-5'>
             <li id='contact01-redes' className='w-full flex justify-evenly'>
               <ul id='contact01-redes-inner' className='w-full sm:w-2/3 flex justify-evenly'>
-                {renderIcons()}
+                {contact01vars.map(e => (
+                  <Icon key={e.name} e={e} />
+                ))}
               </ul>
             </li>
             <li id='contact01-direccion' className='flex flex-row justify-center'>
@@ -34,7 +62,7 @@ export function Contact01 () {
           </ul>
         </div>
         <div id='contact01-down' className='w-full h-3/5 text-center'>
-          <form id='contact01-form' className='w-full h-full flex flex-wrap justify-evenly'>
+          <form id='contact01-form' className='w-full h-full flex flex-wrap justify-evenly' ref={form} onSubmit={handleSubmit}>
             <div id='contact01-containerImputs' className='w-full flex-row flex flex-wrap justify-between'>
               <div id='contact01-containerTitle02' className='w-full'>
                 <h4 id='contact01-down-title' className='text-2xl w-full font-bold uppercase px-4 dark:text-palette-light-bg100 text-palette-light-txt800 p-0 mb-5 h-8'> {data.TituloForm} </h4>
@@ -44,12 +72,12 @@ export function Contact01 () {
                 </div>
               </div>
               <div id='contact01-inputs-container' className='flex flex-wrap justify-around gap-4 w-full'>
-                <input id='contact01-name' type='text' className='w-2/5 border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm h-12 px-3 text-start focus:outline-none' placeholder='nombre' />
-                <input id='contact01-email' type='email' className='w-2/5 border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm h-12 px-3 text-start focus:outline-none' placeholder='email' />
-                <textarea id='contact01-messaje' type='text' className='w-4/5 lg:w-full border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm h-32 p-3 text-start resize-none mt-5 focus:outline-none' placeholder='mensaje' />
+                <input id='contact01-name' name='clientName' type='text' className='w-2/5 border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm h-12 px-3 text-start focus:outline-none' placeholder='nombre' required />
+                <input id='contact01-email' name='clientEmail' type='email' className='w-2/5 border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm h-12 px-3 text-start focus:outline-none' placeholder='email' required />
+                <textarea id='contact01-messaje' name='message' type='text' className='w-4/5 lg:w-full border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm h-32 p-3 text-start resize-none mt-5 focus:outline-none' placeholder='mensaje' required />
               </div>
               <div className='w-full'>
-                <button id='contact01-sendButton' className='py-1 px-3 w-1/2 h-12 border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm mt-5 text-white'> {data.BotonEnviar} </button>
+                <input type='submit' value={data.BotonEnviar} id='contact01-sendButton' className='py-1 px-3 w-1/2 h-12 border-2 border-palette-light-txt800 dark:border-palette-light-bg200 rounded-sm mt-5 text-white cursor-pointer' />
               </div>
             </div>
           </form>
@@ -59,17 +87,11 @@ export function Contact01 () {
   )
 }
 
-const renderIcons = () => {
-  return contact01vars.map(e => (
-    <Icon key={e.name} e={e} />
-  ))
-}
-
 const Icon = ({ e }) => {
   return (
     <li id={`contact01-${e.name}-container`} className='flex w-auto h-auto'>
       <a id='contact01-facebook-link' href={e.link} className='flex w-auto h-auto' rel='noreferrer' target='_blank'>
-        <FontAwesomeIcon id='contact01-facebook-icon' className='text-3xl md:text-4xl' icon={e.svg} />
+        <FontAwesomeIcon id='contact01-facebook-icon' className='text-3xl md:text-4xl' icon={['fab', e.svg]} />
       </a>
     </li>
   )
