@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "title": "Starter",
+        "price": "$1073.3",
+        "priceDetail": "ARS mes /empleado",
+        "detail": "Perfecto para centralizar la gestión en RRHH de startups, empresas chicas y nuevas.",
+        "button": "Elegir este plan",
+        "link": "VER MAS",
+        "items": ["Control horario", "Gestion de turnos", "Gestion de licencias", "Expediente digital"]
+    },
+    {
+        "id": 2,
+        "title": "Business",
+        "price": "$1626.3",
+        "priceDetail": "ARS mes /empleado",
+        "detail": "Ideal para empresas que necesiten sistematizar procesos.",
+        "button": "Elegir este plan",
+        "link": "VER MAS",
+        "items": ["Funciones plan STARTER", "Portal del colaborador", "Cartelera digital", "Organigrama", "Inventario", "Recibos de nómina digital"]
+    },
+    {
+        "id": 3,
+        "title": "Enterprise",
+        "logo": "LOGO",
+        "detail": "Una poderosa solución para posicionar y escalar a tu equipo RRHH al top.",
+        "button": "Quiero saber más",
+        "link": "VER MAS",
+        "items": ["Funciones plan BUSINESS", "Servicio técnico asistido", "Onboarding asistido", "Single Sing On", "Almacenamiento ilimitado"]
+    }
+]

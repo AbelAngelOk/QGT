@@ -1,0 +1,28 @@
+[
+    {
+        "id":"0",
+        "titulo":"Garantizar seguridad",
+        "description":"Proponemos implementar una política de 'Tolerancia Cero' en materia de seguridad. Mantener un patrullaje constante las 24 horas del día, los 7 días de la semana en todos los barrios. Que nuestros policías estén debidamente armados y cuentan con los permisos necesarios para actuar en caso de emergencia. Además, queremos incorporar pistolas TASER como herramienta para reducir eficazmente a los delincuentes.",
+        "logo": "./src/assets/img/seguridad.svg"
+    },
+    {
+        "id":"1",
+        "titulo":"Bajar Impuestos",
+        "description":"Nuestro compromiso es eliminar los impuestos innecesarios y reducir las tasas municipales para aliviar la carga financiera de nuestros ciudadanos. Nos aseguraremos de que los recursos recaudados se destinen únicamente a garantizar la seguridad, la limpieza, la salud y la educación en nuestra comunidad. Queremos asegurar que cada centavo de los impuestos se utilice de manera eficiente y efectiva para mejorar la calidad de vida de nuestros ciudadanos."
+    },
+    {
+        "id":"2",
+        "titulo":"Hospitales Dignos",
+        "description":"Llevaremos a cabo una completa renovación de las salas de guardia para brindar un entorno más cómodo y moderno a nuestros pacientes. Implementaremos un sistema de turnos vía celular para agilizar y simplificar el proceso de programación de citas médicas.Además, nos enfocaremos en garantizar la provisión y control adecuado de insumos hospitalarios, asegurando que los recursos necesarios estén disponibles en todo momento. Asimismo, realizaremos reparaciones en los edificios que se encuentren deteriorados, para asegurar un entorno seguro y funcional para pacientes y personal médico."
+    },
+    {
+        "id":"3",
+        "titulo":"Educación de Calidad",
+        "description":"Nos comprometemos a proporcionar aulas calefaccionadas y completamente equipadas para facilitar un entorno de aprendizaje óptimo y promover el trabajo pedagógico de calidad. Además, nos aseguraremos de que nuestros edificios escolares cumplan con todas las normas de seguridad y estén en condiciones óptimas de salubridad. Nos enfocaremos en realizar las reparaciones necesarias y mantener un entorno escolar seguro y saludable para nuestros estudiantes y personal docente."
+    },
+    {
+        "id":"4",
+        "titulo":"Proximamente",
+        "description":"yes"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "href":"Compromiso#finance",
+        "boxTitle":"Finance",
+        "boxText": "Identity verifcation is key step before accepting new clients..."
+    },
+    {
+        "href":"Compromiso#identity",
+        "boxTitle":"Identity",
+        "boxText": "Simply opening a new bank account in certain countries..."
+    },
+    {
+        "href":"",
+        "boxTitle":"Lorem",
+        "boxText": "Lorem Lorem Lorem Lorem Lorem Lorem"
+    },
+    {
+        "href":"",
+        "boxTitle":"Lorem",
+        "boxText": "Lorem Lorem Lorem Lorem Lorem Lorem"
+    },
+    {
+        "href":"",
+        "boxTitle":"Lorem",
+        "boxText": "Lorem Lorem Lorem Lorem Lorem Lorem"
+    },
+    {
+        "href":"",
+        "boxTitle":"Lorem",
+        "boxText": "Lorem Lorem Lorem Lorem Lorem Lorem"
+    }
+]

@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.second-card__total-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 65%;
+    margin: 15px auto 30px auto;
+}
+
+.second-card__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.second-card__left-panel {
+    width: 60%;
+}
+
+.second-card__left-panel > h3 {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+    color: #295eda;
+}
+
+.second-card__left-panel > p {
+    text-align: justify;
+    line-height: 22px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.second-card__left-panel > button {
+    background-color: #0033ad;
+    border: none;
+    border-radius: 12px;
+    height: 45px;
+    width: 140px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.second-card__left-panel > button:hover {
+    background-color: #1c49fd;
+}
+
+.second-card__right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: 327px;
+}
+
+.second-card__right-panel > div {
+    text-align: center;
+}
+
+.second-card__right-panel-logo {
+    font-size: 2.5rem;
+}
+
+.second-card__right-panel-upper > h4 {
+    color: #727272;
+    margin-bottom: 8px;
+    font-weight: 300;
+}
+
+.second-card__right-panel-upper > p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.second-card__right-panel-lower > h4 {
+    color: #727272;
+    margin-bottom: 8px;
+    font-weight: 300;
+}
+
+.second-card__right-panel-lower > p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}

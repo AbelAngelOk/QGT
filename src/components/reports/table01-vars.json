@@ -1,0 +1,20 @@
+[
+    {
+        "año":"2023",
+        "periodo":"Q1",
+        "nombre":"Informe de periodo de Enero-Marzo",
+        "urlInforme":"https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q1-2023-Update"
+    },
+    {
+        "año":"2023",
+        "periodo":"Q2",
+        "nombre":"Informe de periodo de Marzo-Junio",
+        "urlInforme":"https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q1-2023-Update"
+    },
+    {
+        "año":"2023",
+        "periodo":"Q3",
+        "nombre":"Informe de periodo de Junio-Agosto",
+        "urlInforme":"https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q1-2023-Update"
+    }
+]
